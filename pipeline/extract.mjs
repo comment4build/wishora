@@ -1,6 +1,6 @@
 // Rule-based extraction: no AI, no API. Every claim comes with a quote copied from the page.
-const REWARD = /\b(free|gift|treat|discount|voucher|coupon|reward|offer|perk|surprise)\b|\d+\s?% off/i;
-const STRONG = /\b(free|gift|treat|discount|voucher|coupon)\b|\d+\s?% off/i;
+const REWARD = /\b(free|complimentary|freebie|gift|treat|discount|voucher|coupon|reward|offer|perk|surprise|bonus|points|stars)\b|\d+\s?% off/i;
+const STRONG = /\b(free|complimentary|freebie|gift|treat|discount|voucher|coupon)\b|\d+\s?% off|(?:bonus|double|triple|\d\s?x)\s+(?:points|stars)/i;
 const STOP = /^(or|and|on|for|in|at|with|when|to|of|your|a|an|the|if|is)$/i;
 const days = (n, u) => +n * (/week/i.test(u) ? 7 : /month/i.test(u) ? 30 : 1);
 // 25-word window of the sentence, starting just before character index idx (exact substring of the page text)
@@ -18,10 +18,10 @@ export function extractFacts(text) {
   const best = cands.slice().sort((a, b) => score(b) - score(a))[0];
 
   let offer = "Birthday reward for members";
-  const m = best.match(/free ([a-z]+)(?: ([a-z]+))?|(\d+\s?% off)|(birthday (?:gift|treat|voucher))|\b(discount|voucher|coupon)\b/i);
+  const m = best.match(/(?:free|complimentary) ([a-z]+)(?: ([a-z]+))?|(\d+\s?% off)|(birthday (?:gift|treat|voucher))|\b(discount|voucher|coupon)\b|((?:bonus|double|triple|\d\s?x)\s+(?:points|stars))/i);
   if (m) {
     if (m[1] && !STOP.test(m[1])) offer = "Free " + m[1] + (m[2] && !STOP.test(m[2]) ? " " + m[2] : "");
-    else if (m[3] || m[4] || m[5]) offer = (m[3] || m[4] || m[5]).replace(/^./, (c) => c.toUpperCase());
+    else if (m[3] || m[4] || m[5] || m[6]) offer = (m[3] || m[4] || m[5] || m[6]).replace(/^./, (c) => c.toUpperCase());
   }
 
   const times = []; let join = null, x;

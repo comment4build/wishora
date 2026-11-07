@@ -10,4 +10,6 @@ assert.equal(extractFacts("We sell coffee and cakes every day.").found, false);
 const tiers = "Green members get a free drink on your birthday. Gold members get a treat during your birthday month.";
 assert.equal(extractFacts(tiers).timing, null, "conflicting timings must not be guessed");
 assert.ok(isOfficial("https://www.brand.com/x", ["brand.com"])); assert.ok(!isOfficial("https://brand.com.evil.io/", ["brand.com"]));
+const pts = extractFacts("Rewards members earn 3X points on purchases during their birthday month. Points are added automatically.");
+assert.equal(pts.found, true); assert.equal(pts.offer, "3X points"); assert.deepEqual(pts.timing, { type: "month", from: 0, to: 0 });
 console.log("all tests passed");

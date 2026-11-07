@@ -1,15 +1,1052 @@
 [
-  {"id":"starbucks-us","brand":"Starbucks","countries":["US"],"domains":["starbucks.com"],"categories":["Coffee","Food & drink"]},
-  {"id":"starbucks-gb","brand":"Starbucks","countries":["GB"],"domains":["starbucks.co.uk"],"categories":["Coffee","Food & drink"]},
-  {"id":"krispy-kreme-us","brand":"Krispy Kreme","countries":["US"],"domains":["krispykreme.com"],"categories":["Sweet treats","Food & drink"]},
-  {"id":"krispy-kreme-gb","brand":"Krispy Kreme","countries":["GB"],"domains":["krispykreme.co.uk"],"categories":["Sweet treats","Food & drink"]},
-  {"id":"sephora-us","brand":"Sephora","countries":["US"],"domains":["sephora.com"],"categories":["Beauty","Self-care"]},
-  {"id":"sephora-gb","brand":"Sephora","countries":["GB"],"domains":["sephora.co.uk"],"categories":["Beauty","Self-care"]},
-  {"id":"ulta-us","brand":"Ulta Beauty","countries":["US"],"domains":["ulta.com"],"categories":["Beauty","Self-care"]},
-  {"id":"rituals-be","brand":"Rituals","countries":["BE"],"domains":["rituals.com"],"categories":["Self-care","Beauty"]},
-  {"id":"hm-be","brand":"H&M","countries":["BE"],"domains":["hm.com"],"categories":["Fashion"]},
-  {"id":"dunkin-us","brand":"Dunkin'","countries":["US"],"domains":["dunkindonuts.com"],"categories":["Coffee","Sweet treats"]},
-  {"id":"nandos-gb","brand":"Nando's","countries":["GB"],"domains":["nandos.co.uk"],"categories":["Food & drink"]},
-  {"id":"costa-gb","brand":"Costa Coffee","countries":["GB"],"domains":["costa.co.uk"],"categories":["Coffee"]},
-  {"id":"build-a-bear-us","brand":"Build-A-Bear","countries":["US"],"domains":["buildabear.com"],"categories":["Kids & family"],"kids":true}
+ {
+  "id": "starbucks-us",
+  "brand": "Starbucks",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "starbucks.com"
+  ],
+  "categories": [
+   "Coffee",
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "dunkin-us",
+  "brand": "Dunkin'",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "dunkindonuts.com"
+  ],
+  "categories": [
+   "Coffee",
+   "Sweet treats"
+  ]
+ },
+ {
+  "id": "krispy-kreme-us",
+  "brand": "Krispy Kreme",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "krispykreme.com"
+  ],
+  "categories": [
+   "Sweet treats",
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "baskin-robbins-us",
+  "brand": "Baskin-Robbins",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "baskinrobbins.com"
+  ],
+  "categories": [
+   "Sweet treats"
+  ]
+ },
+ {
+  "id": "cold-stone-us",
+  "brand": "Cold Stone Creamery",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "coldstonecreamery.com"
+  ],
+  "categories": [
+   "Sweet treats"
+  ]
+ },
+ {
+  "id": "panera-us",
+  "brand": "Panera Bread",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "panerabread.com"
+  ],
+  "categories": [
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "chipotle-us",
+  "brand": "Chipotle",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "chipotle.com"
+  ],
+  "categories": [
+   "Mexican",
+   "Burgers & fast food"
+  ]
+ },
+ {
+  "id": "taco-bell-us",
+  "brand": "Taco Bell",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "tacobell.com"
+  ],
+  "categories": [
+   "Mexican",
+   "Burgers & fast food"
+  ]
+ },
+ {
+  "id": "dennys-us",
+  "brand": "Denny's",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "dennys.com"
+  ],
+  "categories": [
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "ihop-us",
+  "brand": "IHOP",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "ihop.com"
+  ],
+  "categories": [
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "olive-garden-us",
+  "brand": "Olive Garden",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "olivegarden.com"
+  ],
+  "categories": [
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "applebees-us",
+  "brand": "Applebee's",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "applebees.com"
+  ],
+  "categories": [
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "red-robin-us",
+  "brand": "Red Robin",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "redrobin.com"
+  ],
+  "categories": [
+   "Burgers & fast food",
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "buffalo-wild-wings-us",
+  "brand": "Buffalo Wild Wings",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "buffalowildwings.com"
+  ],
+  "categories": [
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "jersey-mikes-us",
+  "brand": "Jersey Mike's",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "jerseymikes.com"
+  ],
+  "categories": [
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "panda-express-us",
+  "brand": "Panda Express",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "pandaexpress.com"
+  ],
+  "categories": [
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "dominos-us",
+  "brand": "Domino's",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "dominos.com"
+  ],
+  "categories": [
+   "Pizza",
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "papa-johns-us",
+  "brand": "Papa Johns",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "papajohns.com"
+  ],
+  "categories": [
+   "Pizza",
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "sephora-us",
+  "brand": "Sephora",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "sephora.com"
+  ],
+  "categories": [
+   "Beauty",
+   "Self-care"
+  ]
+ },
+ {
+  "id": "ulta-us",
+  "brand": "Ulta Beauty",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "ulta.com"
+  ],
+  "categories": [
+   "Beauty",
+   "Self-care"
+  ]
+ },
+ {
+  "id": "bath-body-works-us",
+  "brand": "Bath & Body Works",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "bathandbodyworks.com"
+  ],
+  "categories": [
+   "Self-care",
+   "Beauty"
+  ]
+ },
+ {
+  "id": "victorias-secret-us",
+  "brand": "Victoria's Secret",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "victoriassecret.com"
+  ],
+  "categories": [
+   "Fashion",
+   "Beauty"
+  ]
+ },
+ {
+  "id": "old-navy-us",
+  "brand": "Old Navy",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "oldnavy.gap.com",
+   "oldnavy.com"
+  ],
+  "categories": [
+   "Fashion"
+  ]
+ },
+ {
+  "id": "barnes-noble-us",
+  "brand": "Barnes & Noble",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "barnesandnoble.com"
+  ],
+  "categories": [
+   "Books"
+  ]
+ },
+ {
+  "id": "build-a-bear-us",
+  "brand": "Build-A-Bear",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "buildabear.com"
+  ],
+  "categories": [
+   "Kids & family"
+  ],
+  "kids": true
+ },
+ {
+  "id": "regal-us",
+  "brand": "Regal Cinemas",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "regmovies.com"
+  ],
+  "categories": [
+   "Movies & fun"
+  ]
+ },
+ {
+  "id": "amc-us",
+  "brand": "AMC Theatres",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "amctheatres.com"
+  ],
+  "categories": [
+   "Movies & fun"
+  ]
+ },
+ {
+  "id": "petsmart-us",
+  "brand": "PetSmart",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "petsmart.com"
+  ],
+  "categories": [
+   "Pets"
+  ]
+ },
+ {
+  "id": "petco-us",
+  "brand": "Petco",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "petco.com"
+  ],
+  "categories": [
+   "Pets"
+  ]
+ },
+ {
+  "id": "michaels-us",
+  "brand": "Michaels",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "michaels.com"
+  ],
+  "categories": [
+   "Crafts & home"
+  ]
+ },
+ {
+  "id": "joann-us",
+  "brand": "Jo-Ann",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "joann.com"
+  ],
+  "categories": [
+   "Crafts & home"
+  ]
+ },
+ {
+  "id": "starbucks-gb",
+  "brand": "Starbucks",
+  "countries": [
+   "GB"
+  ],
+  "domains": [
+   "starbucks.co.uk"
+  ],
+  "categories": [
+   "Coffee",
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "krispy-kreme-gb",
+  "brand": "Krispy Kreme",
+  "countries": [
+   "GB"
+  ],
+  "domains": [
+   "krispykreme.co.uk"
+  ],
+  "categories": [
+   "Sweet treats",
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "sephora-gb",
+  "brand": "Sephora",
+  "countries": [
+   "GB"
+  ],
+  "domains": [
+   "sephora.co.uk"
+  ],
+  "categories": [
+   "Beauty",
+   "Self-care"
+  ]
+ },
+ {
+  "id": "rituals-be",
+  "brand": "Rituals",
+  "countries": [
+   "BE"
+  ],
+  "domains": [
+   "rituals.com"
+  ],
+  "categories": [
+   "Self-care",
+   "Beauty"
+  ]
+ },
+ {
+  "id": "hm-be",
+  "brand": "H&M",
+  "countries": [
+   "BE"
+  ],
+  "domains": [
+   "hm.com"
+  ],
+  "categories": [
+   "Fashion"
+  ]
+ },
+ {
+  "id": "nandos-gb",
+  "brand": "Nando's",
+  "countries": [
+   "GB"
+  ],
+  "domains": [
+   "nandos.co.uk"
+  ],
+  "categories": [
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "costa-gb",
+  "brand": "Costa Coffee",
+  "countries": [
+   "GB"
+  ],
+  "domains": [
+   "costa.co.uk"
+  ],
+  "categories": [
+   "Coffee"
+  ]
+ },
+ {
+  "id": "chick-fil-a-us",
+  "brand": "Chick-fil-A",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "chick-fil-a.com"
+  ],
+  "categories": [
+   "Burgers & fast food",
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "wendys-us",
+  "brand": "Wendy's",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "wendys.com"
+  ],
+  "categories": [
+   "Burgers & fast food",
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "burger-king-us",
+  "brand": "Burger King",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "bk.com"
+  ],
+  "categories": [
+   "Burgers & fast food",
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "mcdonalds-us",
+  "brand": "McDonald's",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "mcdonalds.com"
+  ],
+  "categories": [
+   "Burgers & fast food",
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "sonic-us",
+  "brand": "Sonic Drive-In",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "sonicdrivein.com"
+  ],
+  "categories": [
+   "Burgers & fast food",
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "arbys-us",
+  "brand": "Arby's",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "arbys.com"
+  ],
+  "categories": [
+   "Burgers & fast food",
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "popeyes-us",
+  "brand": "Popeyes",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "popeyes.com"
+  ],
+  "categories": [
+   "Burgers & fast food",
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "kfc-us",
+  "brand": "KFC",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "kfc.com"
+  ],
+  "categories": [
+   "Burgers & fast food",
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "wingstop-us",
+  "brand": "Wingstop",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "wingstop.com"
+  ],
+  "categories": [
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "qdoba-us",
+  "brand": "Qdoba",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "qdoba.com"
+  ],
+  "categories": [
+   "Mexican",
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "moes-us",
+  "brand": "Moe's Southwest Grill",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "moes.com"
+  ],
+  "categories": [
+   "Mexican",
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "noodles-us",
+  "brand": "Noodles & Company",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "noodles.com"
+  ],
+  "categories": [
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "smoothie-king-us",
+  "brand": "Smoothie King",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "smoothieking.com"
+  ],
+  "categories": [
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "tropical-smoothie-us",
+  "brand": "Tropical Smoothie Cafe",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "tropicalsmoothiecafe.com"
+  ],
+  "categories": [
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "einstein-bros-us",
+  "brand": "Einstein Bros. Bagels",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "einsteinbros.com"
+  ],
+  "categories": [
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "dairy-queen-us",
+  "brand": "Dairy Queen",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "dairyqueen.com"
+  ],
+  "categories": [
+   "Sweet treats"
+  ]
+ },
+ {
+  "id": "insomnia-cookies-us",
+  "brand": "Insomnia Cookies",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "insomniacookies.com"
+  ],
+  "categories": [
+   "Sweet treats"
+  ]
+ },
+ {
+  "id": "nothing-bundt-cakes-us",
+  "brand": "Nothing Bundt Cakes",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "nothingbundtcakes.com"
+  ],
+  "categories": [
+   "Sweet treats"
+  ]
+ },
+ {
+  "id": "texas-roadhouse-us",
+  "brand": "Texas Roadhouse",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "texasroadhouse.com"
+  ],
+  "categories": [
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "chilis-us",
+  "brand": "Chili's",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "chilis.com"
+  ],
+  "categories": [
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "peets-us",
+  "brand": "Peet's Coffee",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "peets.com"
+  ],
+  "categories": [
+   "Coffee"
+  ]
+ },
+ {
+  "id": "caribou-us",
+  "brand": "Caribou Coffee",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "cariboucoffee.com"
+  ],
+  "categories": [
+   "Coffee"
+  ]
+ },
+ {
+  "id": "dutch-bros-us",
+  "brand": "Dutch Bros",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "dutchbros.com"
+  ],
+  "categories": [
+   "Coffee"
+  ]
+ },
+ {
+  "id": "pizza-hut-us",
+  "brand": "Pizza Hut",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "pizzahut.com"
+  ],
+  "categories": [
+   "Pizza",
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "marcos-us",
+  "brand": "Marco's Pizza",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "marcos.com"
+  ],
+  "categories": [
+   "Pizza",
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "blaze-pizza-us",
+  "brand": "Blaze Pizza",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "blazepizza.com"
+  ],
+  "categories": [
+   "Pizza",
+   "Food & drink"
+  ]
+ },
+ {
+  "id": "lush-us",
+  "brand": "Lush",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "lush.com"
+  ],
+  "categories": [
+   "Self-care",
+   "Beauty"
+  ]
+ },
+ {
+  "id": "sally-beauty-us",
+  "brand": "Sally Beauty",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "sallybeauty.com"
+  ],
+  "categories": [
+   "Beauty"
+  ]
+ },
+ {
+  "id": "kohls-us",
+  "brand": "Kohl's",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "kohls.com"
+  ],
+  "categories": [
+   "Fashion"
+  ]
+ },
+ {
+  "id": "hollister-us",
+  "brand": "Hollister",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "hollisterco.com"
+  ],
+  "categories": [
+   "Fashion"
+  ]
+ },
+ {
+  "id": "american-eagle-us",
+  "brand": "American Eagle",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "ae.com"
+  ],
+  "categories": [
+   "Fashion"
+  ]
+ },
+ {
+  "id": "torrid-us",
+  "brand": "Torrid",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "torrid.com"
+  ],
+  "categories": [
+   "Fashion"
+  ]
+ },
+ {
+  "id": "yankee-candle-us",
+  "brand": "Yankee Candle",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "yankeecandle.com"
+  ],
+  "categories": [
+   "Crafts & home",
+   "Self-care"
+  ]
+ },
+ {
+  "id": "dave-and-busters-us",
+  "brand": "Dave & Buster's",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "daveandbusters.com"
+  ],
+  "categories": [
+   "Movies & fun",
+   "Gaming"
+  ]
+ },
+ {
+  "id": "topgolf-us",
+  "brand": "Topgolf",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "topgolf.com"
+  ],
+  "categories": [
+   "Movies & fun"
+  ]
+ },
+ {
+  "id": "cinemark-us",
+  "brand": "Cinemark",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "cinemark.com"
+  ],
+  "categories": [
+   "Movies & fun"
+  ]
+ },
+ {
+  "id": "hot-topic-us",
+  "brand": "Hot Topic",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "hottopic.com"
+  ],
+  "categories": [
+   "Fashion"
+  ]
+ },
+ {
+  "id": "gamestop-us",
+  "brand": "GameStop",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "gamestop.com"
+  ],
+  "categories": [
+   "Gaming"
+  ]
+ },
+ {
+  "id": "chuck-e-cheese-us",
+  "brand": "Chuck E. Cheese",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "chuckecheese.com"
+  ],
+  "categories": [
+   "Kids & family",
+   "Movies & fun"
+  ],
+  "kids": true
+ },
+ {
+  "id": "books-a-million-us",
+  "brand": "Books-A-Million",
+  "countries": [
+   "US"
+  ],
+  "domains": [
+   "booksamillion.com"
+  ],
+  "categories": [
+   "Books"
+  ]
+ }
 ]

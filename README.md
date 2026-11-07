@@ -12,6 +12,10 @@ free scraper that reads each brand's **own** website. No API keys, no paid servi
    and the page doesn't describe conflicting timings (e.g. tiers); otherwise the site shows "Check timing".
 4. **Age:** every deal keeps its `lastVerified` date. Two failed re-checks mark it stale, five remove it.
 
+Coverage: about 70 US brands (coffee, fast food, restaurants, pizza, sweets, beauty, fashion, books, kids, games, cinemas, pets, crafts) plus a few UK and Belgian ones.
+Programmes change: some brands have cut birthday freebies or never had them. Those are skipped, not guessed.
+After every run, `data/report.json` lists each brand as verified, skipped or failed, with the reason.
+
 Third-party blogs are never a source. They often contradict each other and the brand.
 
 ## Set up (free)

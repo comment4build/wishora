@@ -164,7 +164,7 @@ header.top .tabs{position:static;flex:1 1 auto;min-width:0;justify-content:flex-
 <div class="chips" id="sugg"></div>
 <div id="log" class="log" role="log" aria-live="polite"></div>
 <div class="askrow"><input id="q" placeholder="Ask about your deals…" maxlength="300" aria-label="Your question"><button class="btn small" id="ask" type="button">Ask</button></div>
-<p class="priv">To answer, your plan details (birthday, country, city, interests, brands, budget) are sent to Claude. Offers are unverified samples, so check terms with the brand.</p>
+<p class="priv">No AI is used and nothing is sent anywhere: answers are matched from your deals list on this device.</p>
 </section>
 
 <footer>Deals are checked against each brand’s own website and show when they were last verified. Offers change often, so confirm the terms with the brand before you rely on one. If a deal fails, use “Report not working”.</footer>
@@ -174,7 +174,7 @@ header.top .tabs{position:static;flex:1 1 auto;min-width:0;justify-content:flex-
 (function(){
 var KEY="wishora:v1";
 var COUNTRIES=[["BE","Belgium"],["GB","United Kingdom"],["US","United States"],["FR","France"],["NL","Netherlands"],["DE","Germany"],["IE","Ireland"],["CA","Canada"],["AU","Australia"],["XX","Somewhere else"]];
-var INTERESTS=["Food & drink","Coffee","Sweet treats","Beauty","Fashion","Books","Kids & family","Pizza","Self-care"];
+var INTERESTS=["Food & drink","Coffee","Sweet treats","Pizza","Burgers & fast food","Mexican","Beauty","Self-care","Fashion","Books","Kids & family","Movies & fun","Gaming","Pets","Crafts & home"];
 // id, brand, offer, tags, countries, type(day|week|month), from, to, join(days ahead you must be a member), needs, steps, sponsored
 var D=[
 ["sbx","Starbucks","A free drink for rewards members",["Coffee","Food & drink"],["US","GB","CA","AU","BE","FR","NL","DE","IE"],"month",0,0,0,["App","Membership"],["Join the rewards programme in the app","Check the offer in the app near your birthday","Show the app code at the counter"]],
@@ -184,7 +184,6 @@ var D=[
 ["rit","Rituals","A birthday gift for members",["Self-care","Beauty"],["BE","NL","DE","FR","GB"],"month",0,0,14,["Membership","In-store"],["Create a free account","Add your birthday","Collect your gift in store"]],
 ["pzx","PizzaExpress","A birthday treat for club members",["Pizza","Food & drink"],["GB","IE"],"week",-3,3,7,["Membership","Booking"],["Join the club with your birthday","Book a table","Show your voucher before ordering"]],
 ["nan","Nando’s","A birthday perk for app users",["Food & drink"],["GB","IE","AU","CA"],"day",0,0,7,["App","ID may be asked"],["Sign up in the app","Add your birthday","Show the app offer when you order"]],
-["dnk","Dunkin’","A birthday treat for rewards members",["Coffee","Sweet treats"],["US","CA"],"week",0,7,0,["App","In-store"],["Join the rewards programme","Open the birthday reward in the app","Scan it at checkout"]],
 ["bsk","Baskin-Robbins","A birthday scoop for rewards members",["Sweet treats"],["US","CA","AU"],"month",0,0,7,["App"],["Join the rewards programme","Open the offer in the app","Show it at the counter"]],
 ["bab","Build-A-Bear","A birthday offer for kids’ club members",["Kids & family"],["US","GB","CA","IE","AU"],"month",0,0,14,["Membership","In-store"],["Join the club with the child’s birthday","Receive the offer","Bring it to the workshop"],"kids"],
 ["bn","Barnes & Noble","A birthday treat for members",["Books"],["US"],"month",0,0,0,["Membership"],["Join the free membership","Add your birthday","Use the offer in store"]],
@@ -318,30 +317,58 @@ function cal(R,L,p){
   +'<ul class="agl">'+E.slice(0,8).map(row).join("")+'</ul>'+(E.length>8?'<details style="margin-top:8px"><summary>Show '+(E.length-8)+' more dates</summary><ul class="agl">'+E.slice(8).map(row).join("")+'</ul></details>':'')+'</div></section>';
  return h}
 var tab="plan";function hid(t){return tab===t?"":" hidden"}
-var plan=null,chat=[],busy=false,AI=null,tried=false;
-var SYS="You are Wishora’s birthday assistant. Recommend birthday deals using ONLY the deals in the CONTEXT. Never invent brands, rewards, prices or dates. The deals are unverified samples, so when you give a concrete recommendation remind the user to check terms with the brand. Weigh the user’s interests, favourite brands, city, today’s date, join-by dates and budget. The data has no purchase costs: if the budget is tight, prefer rewards that only need a sign-up and say a purchase may be needed. Be warm and brief: under 120 words, plain text, at most 4 short lines starting with •, no markdown symbols such as ** or #. Give the next concrete step with a date where possible. If the question is not about birthday deals, say so politely in one sentence. If nothing fits, say so. End with one final line exactly like PICKS: id1,id2 using ids from the deals (max 3), or PICKS: none.";
+var plan=null,chat=[];
 function budLabels(){var s=(plan&&SYM[plan.p.country])||"€";return ["Free only","Up to "+s+"10","Up to "+s+"25","No limit"]}
 function drawAi(){var b=st.bud==null?1:st.bud;$("budChips").innerHTML=budLabels().map(function(x,i){return '<button type="button" class="chip" data-b="'+i+'" aria-pressed="'+(b===i)+'">'+esc(x)+'</button>'}).join("");
- $("sugg").innerHTML=["What should I claim first?","Best deals for my interests?","What can I get this week?","Get the most value on my budget"].map(function(x){return '<button type="button" class="chip" data-q="'+esc(x)+'">'+esc(x)+'</button>'}).join("")}
-function ctx(){var P=plan.p,R=plan.R,s=SYM[P.country]||"€",cn=(COUNTRIES.filter(function(c){return c[0]===P.country})[0]||["","Unspecified"])[1];
- return JSON.stringify({today:fmt(R.today),userBirthday:fmt(R.next),daysToBirthday:R.days,country:cn,city:P.city||null,age:P.age||null,interests:P.ints,favouriteBrands:P.brands,budget:budLabels()[st.bud==null?1:st.bud],deals:plan.L.map(function(d){return {id:d.id,brand:d.brand,reward:d.offer,categories:d.tags,needs:d.needs,joinByDate:d.joinBy?(d.left>=0?fmt(d.joinBy):"already passed"):"no sign-up lead time",rewardWindow:fmt(d.start)+" to "+fmt(d.end),estimatedValue:s+(VAL[d.id]||0),whyMatched:d.why,claimed:!!(st.done||{})[d.id+"-"+R.yr]}})})}
+ $("sugg").innerHTML=["What should I claim first?","Best deals for my interests?","What can I get this week?","Get the most value on my budget","Which deals need an app?","How many deals have I claimed?"].map(function(x){return '<button type="button" class="chip" data-q="'+esc(x)+'">'+esc(x)+'</button>'}).join("");
+ if(!$("log").children.length)addMsg("a","Hi! I match your questions against the deals in your plan. Tap a question above, or ask about a brand or a category such as coffee, pizza or beauty.")}
 function addMsg(r,t){var e=document.createElement("div");e.className="msg "+r;e.textContent=t;$("log").appendChild(e);e.scrollIntoView({block:"nearest"});return e}
 function picks(el,ids){var w=document.createElement("div");w.className="picks";ids.forEach(function(id){var d=plan.L.filter(function(x){return x.id===id})[0];if(!d)return;var b=document.createElement("button");b.type="button";b.className="chip";b.dataset.id=id;b.setAttribute("aria-pressed",!!(st.saved||{})[id]);b.textContent=((st.saved||{})[id]?"Saved ★ ":"Save ☆ ")+d.brand;w.appendChild(b)});if(w.children.length)el.appendChild(w)}
-function parse(t){var m=t.match(/PICKS:\s*([^\n]*)\s*$/i),ids=[];if(m){ids=m[1].split(/[,\s]+/).filter(function(x){return plan.L.some(function(d){return d.id===x})}).slice(0,3);t=t.slice(0,m.index)}return {text:t.trim(),ids:ids}}
-function fallback(){var top=plan.L.filter(function(d){return !(st.done||{})[d.id+"-"+plan.R.yr]}).slice(0,3);return {text:top.length?"The AI assistant isn’t available in this view, so here are your best matches for your interests and brands:\n"+top.map(function(d){return "• "+d.brand+": "+d.offer}).join("\n"):"I don’t have any deals to suggest yet.",ids:top.map(function(d){return d.id})}}
-async function ask(q){
- q=q.trim();if(!q||busy||!plan)return;busy=true;$("ask").disabled=true;
- chat.push({role:"user",content:q});addMsg("u",q);$("q").value="";
- var el=addMsg("a","Thinking…"),res;
- try{
-  if(!tried){tried=true;try{AI=window.claude?await claude.use("sample"):null}catch(e){AI=null}}
-  if(!AI)res=fallback();
-  else{var h=chat.slice(-8);while(h.length&&h[0].role==="assistant")h.shift();
-   var msgs=[{role:"user",content:SYS+"\n\nCONTEXT:\n"+ctx()},{role:"assistant",content:"Understood. Ask me anything about your birthday deals."}].concat(h);
-   var r=await AI(msgs,{cache:false,onText:function(o){el.textContent=o.text.replace(/PICKS:[\s\S]*$/i,"").trim()||"Thinking…"}});
-   res=parse(r.text)}
- }catch(err){res=(err&&err.code==="rate_limited")?{text:"I’m getting a lot of questions right now. Please try again in a moment.",ids:[]}:fallback()}
- el.textContent=res.text;picks(el,res.ids);chat.push({role:"assistant",content:res.text});busy=false;$("ask").disabled=false}
+
+// ---- keyword matching: no AI, nothing leaves this device ----
+var TAGS=[[/\b(coffee|latte|espresso|cafe|café)\b/,"Coffee"],[/\bpizza\b/,"Pizza"],[/\b(burgers?|fast food|fries|nuggets?|chicken)\b/,"Burgers & fast food"],[/\b(mexican|tacos?|burritos?)\b/,"Mexican"],[/\b(sweets?|dessert|ice ?cream|doughnuts?|donuts?|cookies?|cake|candy|chocolate)\b/,"Sweet treats"],[/\b(food|eat|restaurants?|dinner|lunch|breakfast|meal|drinks?)\b/,"Food & drink"],[/\b(beauty|makeup|make-up|skincare|perfume|cosmetics?)\b/,"Beauty"],[/\b(self.?care|spa|bath|relax|candles?|soap)\b/,"Self-care"],[/\b(fashion|clothes|clothing|shoes?|jeans|outfit|wear)\b/,"Fashion"],[/\b(books?|reading|novels?)\b/,"Books"],[/\b(kids?|child|children|toddler|family)\b/,"Kids & family"],[/\b(movies?|cinema|film|theatre|theater|fun|bowling|golf)\b/,"Movies & fun"],[/\b(games?|gaming|arcade|console)\b/,"Gaming"],[/\b(pets?|dogs?|cats?|puppy|kitten)\b/,"Pets"],[/\b(crafts?|home|decor|diy|candles?)\b/,"Crafts & home"]];
+function line(d){var w=fmt(d.start)+(+d.start===+d.end?"":" to "+fmt(d.end)),j=d.joinBy?(d.left>=0?"; join by "+fmt(d.joinBy)+" ("+d.left+" days)":"; join date passed"):"";return "• "+d.brand+": "+d.offer+". Window "+w+j+"."}
+function reply(q){
+ var s=q.toLowerCase(),n=norm(q),R=plan.R,T=R.today,L=plan.L,yr=R.yr,sy=SYM[plan.p.country]||"€";
+ function open(){return L.filter(function(d){return !(st.done||{})[d.id+"-"+yr]})}
+ function tc(d){return (d.start<=T&&T<=d.end)||(d.start>T&&daysBetween(T,d.start)<=7)||(d.joinBy&&d.left>=0&&d.left<=7)}
+ function out(intro,list,extra){list=list.slice(0,4);if(!list.length)return {text:intro,ids:[]};
+  var foot=list.some(function(d){return !d.src})?"Some of these are sample listings and not verified yet, so check the brand’s terms.":"Check the brand’s own terms before you go.";
+  return {text:intro+"\n"+list.map(line).join("\n")+(extra?"\n"+extra:"")+"\n"+foot,ids:list.map(function(d){return d.id})}}
+ if(!L.length)return {text:"There are no deals in your plan yet. Try another country on the Plan tab.",ids:[]};
+ // 1. a brand name
+ var hit=L.filter(function(d){var b=norm(d.brand),f=norm(d.brand.split(/[\s'’-]+/)[0]);return b&&(n.indexOf(b)>-1||(f.length>=6&&n.indexOf(f)>-1))});
+ if(hit.length){var h=hit[0];return {text:line(h)+"\nYou’ll need: "+(h.needs.length?h.needs.join(", "):"nothing listed")+".\nSteps: "+h.steps.join(" → ")+".\n"+(h.src?"Last checked "+fmtISO(h.src.lastVerified)+" on the brand’s own page.":"Sample listing, not verified yet."),ids:[h.id]}}
+ // 2. questions about the plan itself
+ if(/^(hi|hello|hey|hiya|help)\b|what can you do/.test(s))return {text:"I can list what to claim first, what’s open this week, deals by category (coffee, pizza, beauty, pets…), deals that need an app, and your progress. Or name a brand.",ids:[]};
+ if(/how many|how much|total|progress|claimed/.test(s)){var c=L.filter(function(d){return (st.done||{})[d.id+"-"+yr]}).length,sv=Object.keys(st.saved||{}).length,pot=0;open().forEach(function(d){pot+=VAL[d.id]||0});
+  return {text:"Your plan has "+L.length+" matched deals: "+c+" claimed, "+sv+" saved."+(pot?" Estimated value still unclaimed: about "+sy+pot+" (rough estimates).":""),ids:[]}}
+ if(/remind|alert|notif|calendar/.test(s))return {text:"Open the Calendar tab. Tap “Remind me” on any date to see it at the top of the calendar within 3 days, or “Add to calendar” to put it in Google Calendar with your own alert.",ids:[]};
+ if(/\b(real|verified|trust|accurate|legit|reliable|source|up to date)\b/.test(s)){var v=L.filter(function(d){return d.src}).length;
+  return {text:v?v+" of your "+L.length+" deals were checked against the brand’s own website, and each shows the date it was last verified. The rest are samples. Offers change, so always confirm the terms.":"None of these have been checked against the brands’ own websites yet. They are samples until the deal checker has run.",ids:[]}}
+ // 3. soonest to expire
+ if(/expire|expiry|ending|last chance|run out/.test(s))return out("These close soonest:",open().filter(function(d){return d.end>=T}).sort(function(a,b){return a.end-b.end}));
+ // 4. category and/or timing
+ var tags=[];TAGS.forEach(function(t){if(t[0].test(s)&&tags.indexOf(t[1])<0)tags.push(t[1])});
+ var wk=/\b(week|soon|now|today|tonight|tomorrow|urgent|upcoming)\b/.test(s);
+ if(tags.length||wk){var base=open();if(tags.length)base=base.filter(function(d){return d.tags.some(function(t){return tags.indexOf(t)>-1})});if(wk)base=base.filter(tc);
+  var what=(tags.length?tags.join(" and ").toLowerCase()+" ":"")+"deals"+(wk?" for the next 7 days":"");
+  return base.length?out("Here are your "+what+":",base):{text:"I can’t find any "+what+" in your plan that you haven’t claimed."+(wk?" Your birthday is "+fmt(R.next)+", "+R.days+" days away.":""),ids:[]}}
+ // 5. requirements
+ var rq=/\bapp\b/.test(s)?["App","an app"]:/\bid\b|identification|proof of age/.test(s)?["ID","ID"]:null;
+ if(rq)return out("Deals that need "+rq[1]+":",open().filter(function(d){return d.needs.some(function(x){return x.indexOf(rq[0])>-1})}));
+ // 6. what to do first
+ if(/first|start|priority|join|sign.?up|deadline|prepare|to do|next step/.test(s)){var j=open().filter(function(d){return d.joinBy&&d.left>=0}).sort(function(a,b){return a.left-b.left});
+  return j.length?out("Do these first. Each needs an account before your window opens, soonest deadline first:",j):out("Nothing needs signing up for early. Your best matches:",open())}
+ // 7. budget and value
+ if(/budget|cheap|free|value|save|saving|worth|afford|most|no purchase|without (buying|spending)/.test(s)){var b=st.bud==null?1:st.bud,lab=budLabels()[b],cs=open();
+  if(b===0||/no purchase|without/.test(s))cs=cs.filter(function(d){return d.needs.indexOf("Purchase may be needed")<0});
+  var hv=cs.some(function(d){return VAL[d.id]>0});if(hv)cs=cs.slice().sort(function(a,b){return (VAL[b.id]||0)-(VAL[a.id]||0)});
+  return out("With your budget set to “"+lab+"”, these look best"+(hv?" by estimated value":"")+":",cs,"Listings only mention a purchase when the brand’s page does, so check the terms.")}
+ // 8. best matches
+ if(/best|top|recommend|suggest|interest|match|for me|deals|rewards|offers?/.test(s))return out("Your best matches, ranked by your brands and interests:",open());
+ return {text:"I didn’t catch that. Try a brand name, a category like coffee or pizza, or ask “What should I claim first?” or “What can I get this week?”.",ids:[]}}
+function ask(q){q=q.trim();if(!q||!plan)return;chat.push({role:"user",content:q});addMsg("u",q);$("q").value="";var res=reply(q),el=addMsg("a",res.text);picks(el,res.ids);chat.push({role:"assistant",content:res.text})}
 $("ask").onclick=function(){ask($("q").value)};
 $("q").onkeydown=function(e){if(e.key==="Enter"){e.preventDefault();ask($("q").value)}};
 $("sugg").onclick=function(e){var b=e.target.closest("button[data-q]");if(b)ask(b.dataset.q)};

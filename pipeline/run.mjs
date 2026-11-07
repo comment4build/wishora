@@ -53,7 +53,8 @@ async function candidates(w) {
       }
     } catch {}
   }
-  return [...found].sort((a, b) => /birthday/i.test(b) - /birthday/i.test(a)).slice(0, 8);
+  for (const p of ["/birthday", "/rewards", "/rewards/birthday", "/loyalty", "/club", "/perks", "/birthday-club", "/email-club", "/offers"]) if (keep(origin + p)) found.add(origin + p);
+  return [...found].sort((a, b) => /birthday/i.test(b) - /birthday/i.test(a)).slice(0, 10);
 }
 
 function build(w, x, url, text) {
@@ -76,7 +77,7 @@ function build(w, x, url, text) {
   };
 }
 
-const out = [];
+const out = [], report = [];
 for (const w of watch) {
   if (only && w.id !== only) { if (old.has(w.id)) out.push(old.get(w.id)); continue; }
   const tried = new Set(), known = [old.get(w.id)?.sourceUrl, w.seedUrl].filter(Boolean);
@@ -91,12 +92,15 @@ for (const w of watch) {
       } catch (e) { err = e.message; }
     }
   }
-  if (rec) { out.push(rec); console.log("verified", w.id, rec.confidence); continue; }
+  if (rec) { out.push(rec); report.push({ id: w.id, status: "verified", confidence: rec.confidence, url: rec.sourceUrl }); console.log("verified", w.id, rec.confidence); continue; }
   const prev = old.get(w.id);
-  if (!prev) { console.log("skipped ", w.id, "-", err); continue; }
+  if (!prev) { report.push({ id: w.id, status: "skipped", reason: err }); console.log("skipped ", w.id, "-", err); continue; }
   const failures = (prev.failures || 0) + 1;
   const status = failures >= 5 ? "removed" : failures >= 2 || daysBetween(prev.lastVerified, today) > 45 ? "stale" : prev.status;
   out.push({ ...prev, failures, status, lastError: err });
+  report.push({ id: w.id, status, reason: err });
   console.log("failed  ", w.id, status, "-", err);
 }
 fs.writeFileSync(new URL("deals.json", dir), JSON.stringify({ generatedAt: new Date().toISOString(), deals: out }, null, 2) + "\n");
+fs.writeFileSync(new URL("report.json", dir), JSON.stringify({ generatedAt: new Date().toISOString(), report }, null, 2) + "\n");
+console.log(`\n${report.filter((r) => r.status === "verified").length} verified, ${report.filter((r) => r.status !== "verified").length} need attention (see data/report.json)`);
