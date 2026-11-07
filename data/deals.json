@@ -1,1 +1,151 @@
-{"generatedAt":null,"deals":[]}
+{
+  "generatedAt": "2026-11-07T10:31:49.193Z",
+  "deals": [
+    {
+      "id": "starbucks-gb",
+      "brand": "Starbucks",
+      "offer": "Free Birthday drink",
+      "categories": [
+        "Coffee",
+        "Food & drink"
+      ],
+      "countries": [
+        "GB"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [],
+      "steps": [
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.starbucks.co.uk/rewards",
+      "evidence": "Free Birthday drink for Gold Members Enjoy a Birthday drink on us when you reach Gold Level too, you deserve it!",
+      "evidenceHash": "8f834e9a6f94",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "krispy-kreme-us",
+      "brand": "Krispy Kreme",
+      "offer": "Free doughnut",
+      "categories": [
+        "Sweet treats",
+        "Food & drink"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership",
+        "App",
+        "Purchase may be needed"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Redeem it in the brand’s app",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.krispykreme.com/rewards",
+      "evidence": "The Perks You Crave free doughnut with any purchase for joining A SWEET BIRTHDAY GIFT FROM US 2X POINTS FOR YOUR ANNIVERSARY Exclusive offers in",
+      "evidenceHash": "fe0fc55b4e7a",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "krispy-kreme-gb",
+      "brand": "Krispy Kreme",
+      "offer": "Birthday gift",
+      "categories": [
+        "Sweet treats",
+        "Food & drink"
+      ],
+      "countries": [
+        "GB"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Add your birthday to your account",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.krispykreme.co.uk/shop/doughnuts-by-range/birthday.html",
+      "evidence": "Pick the best selling favourites or browse our bespoke birthday gift menu.",
+      "evidenceHash": "6369acab7d65",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "ulta-us",
+      "brand": "Ulta Beauty",
+      "offer": "Birthday Gift",
+      "categories": [
+        "Beauty",
+        "Self-care"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [],
+      "steps": [
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.ulta.com/discover/lifestyle/birthday-gifts-for-best-friend",
+      "evidence": "Birthday Gift Ideas for Best Friend | Ulta Beauty SKIP TO MAIN SKIP TO FOOTER Beauty in 2 hours or less—order online, pick up in",
+      "evidenceHash": "46d7b582f3ae",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    }
+  ]
+}
