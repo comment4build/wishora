@@ -1,1 +1,1194 @@
-{"generatedAt":null,"deals":[]}
+{
+  "generatedAt": "2026-11-07T12:19:16.516Z",
+  "deals": [
+    {
+      "id": "dunkin-us",
+      "brand": "Dunkin'",
+      "offer": "3X POINTS",
+      "categories": [
+        "Coffee",
+        "Sweet treats"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [],
+      "steps": [
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.dunkindonuts.com/rewards/",
+      "evidence": "Enjoy 3X POINTS on any purchases made the day before, the day of, or the day after your birthday.",
+      "evidenceHash": "da97fecc2ecd",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "krispy-kreme-us",
+      "brand": "Krispy Kreme",
+      "offer": "Free doughnut",
+      "categories": [
+        "Sweet treats",
+        "Food & drink"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership",
+        "App",
+        "Purchase may be needed"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Redeem it in the brand’s app",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.krispykreme.com/rewards",
+      "evidence": "The Perks You Crave free doughnut with any purchase for joining A SWEET BIRTHDAY GIFT FROM US 2X POINTS FOR YOUR ANNIVERSARY Exclusive offers in",
+      "evidenceHash": "fe0fc55b4e7a",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "cold-stone-us",
+      "brand": "Cold Stone Creamery",
+      "offer": "Birthday reward for members",
+      "categories": [
+        "Sweet treats"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.coldstonecreamery.com/menu/cakes/birthday-cakes/",
+      "evidence": "Birthday Cakes | Devil's Food Cake | Cold Stone Creamery Skip to main content Order Online (opens in a new tab) Our Menu Locations Rewards",
+      "evidenceHash": "184315185fb5",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "chipotle-us",
+      "brand": "Chipotle",
+      "offer": "Free reward that",
+      "categories": [
+        "Mexican",
+        "Burgers & fast food"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.chipotle.com/rewards",
+      "evidence": "CHOOSE YOUR BIRTHDAY REWARD When your birthday rolls around, choose the Free reward that fits your mood.",
+      "evidenceHash": "ac9d227fd3d8",
+      "timingVerified": true,
+      "confidence": "high",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "taco-bell-us",
+      "brand": "Taco Bell",
+      "offer": "Birthday reward for members",
+      "categories": [
+        "Mexican",
+        "Burgers & fast food"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Add your birthday to your account",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.tacobell.com/newsroom/taco-bell-and-milk-bar-launch-new-birthday-cake-churros-nationwide",
+      "evidence": "Milk Bar® Birthday Cake Churros | Taco Bell® Newsroom Menu Rewards Gift Cards Purpose People Planet Food Sign Up Log in Taco Bell Site menu",
+      "evidenceHash": "45a13c7472d0",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "red-robin-us",
+      "brand": "Red Robin",
+      "offer": "Birthday treat",
+      "categories": [
+        "Burgers & fast food",
+        "Food & drink"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [],
+      "steps": [
+        "Add your birthday to your account",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.redrobin.com/rewards",
+      "evidence": "Enjoy a birthday treat during your birthday month!",
+      "evidenceHash": "1042378dbec6",
+      "timingVerified": true,
+      "confidence": "high",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "buffalo-wild-wings-us",
+      "brand": "Buffalo Wild Wings",
+      "offer": "Free wings",
+      "categories": [
+        "Food & drink"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "day",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership",
+        "App"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Redeem it in the brand’s app",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.buffalowildwings.com/rewards/",
+      "evidence": "JOIN NOW EARN POINTS ANY WAY YOU PAY​ As a member, you’ll earn 10 POINTS PER $1 SPENT on qualifying purchases in-store, online and in",
+      "evidenceHash": "b8ced10625c2",
+      "timingVerified": true,
+      "confidence": "high",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "papa-johns-us",
+      "brand": "Papa Johns",
+      "offer": "Free dessert",
+      "categories": [
+        "Pizza",
+        "Food & drink"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership",
+        "App"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Redeem it in the brand’s app",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.papajohns.com/contact-us/frequently-asked-papa-rewards-birthday-questions.html",
+      "evidence": "The Birthday Reward is an opportunity for Papa Johns to wish you a Happy Birthday during your birthday month with a free dessert.",
+      "evidenceHash": "b51e3352f877",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "ulta-us",
+      "brand": "Ulta Beauty",
+      "offer": "Birthday Gift",
+      "categories": [
+        "Beauty",
+        "Self-care"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [],
+      "steps": [
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.ulta.com/discover/lifestyle/birthday-gifts-for-best-friend",
+      "evidence": "Birthday Gift Ideas for Best Friend | Ulta Beauty SKIP TO MAIN SKIP TO FOOTER Beauty in 2 hours or less—order online, pick up in",
+      "evidenceHash": "46d7b582f3ae",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "old-navy-us",
+      "brand": "Old Navy",
+      "offer": "Free shipping",
+      "categories": [
+        "Fashion"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://oldnavy.gap.com/browse/toddler-girls/bestest-birthday-shop?cid=3044214",
+      "evidence": "Toddler Girls The (Bestest!) Birthday Shop Shorts | Old Navy Gap Old Navy Banana Republic Athleta Free shipping on $50+ for rewards members Sign In",
+      "evidenceHash": "3063edfe9b55",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "starbucks-gb",
+      "brand": "Starbucks",
+      "offer": "Free Birthday drink",
+      "categories": [
+        "Coffee",
+        "Food & drink"
+      ],
+      "countries": [
+        "GB"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [],
+      "steps": [
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.starbucks.co.uk/rewards",
+      "evidence": "Free Birthday drink for Gold Members Enjoy a Birthday drink on us when you reach Gold Level too, you deserve it!",
+      "evidenceHash": "8f834e9a6f94",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "krispy-kreme-gb",
+      "brand": "Krispy Kreme",
+      "offer": "Birthday gift",
+      "categories": [
+        "Sweet treats",
+        "Food & drink"
+      ],
+      "countries": [
+        "GB"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Add your birthday to your account",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.krispykreme.co.uk/shop/doughnuts-by-range/birthday.html",
+      "evidence": "Pick the best selling favourites or browse our bespoke birthday gift menu.",
+      "evidenceHash": "6369acab7d65",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "sonic-us",
+      "brand": "Sonic Drive-In",
+      "offer": "Bonus points",
+      "categories": [
+        "Burgers & fast food",
+        "Food & drink"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [],
+      "steps": [
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.sonicdrivein.com/rewards/",
+      "evidence": "Plus, choose your own welcome and birthday offers Level Up Every digital order gets you one step closer to Star and Legend Status and unlocking",
+      "evidenceHash": "9394e3647e32",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "qdoba-us",
+      "brand": "Qdoba",
+      "offer": "Free queso",
+      "categories": [
+        "Mexican",
+        "Food & drink"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.qdoba.com/rewards",
+      "evidence": "If you are a QDOBA Rewards member, you receive free queso and chips as your birthday reward while Gold Status receive a free entr&eacute;e.",
+      "evidenceHash": "effed18903a7",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "moes-us",
+      "brand": "Moe's Southwest Grill",
+      "offer": "Birthday reward for members",
+      "categories": [
+        "Mexican",
+        "Food & drink"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [],
+      "steps": [
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.moes.com/rewards",
+      "evidence": "Birthday Reward Celebrate your big day with a cup of queso or guac.",
+      "evidenceHash": "f3c22cede119",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "noodles-us",
+      "brand": "Noodles & Company",
+      "offer": "Free dessert reward",
+      "categories": [
+        "Food & drink"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [],
+      "steps": [
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.noodles.com/rewards",
+      "evidence": "$1 = 8 Points Spend $1 Earn 8 Points Get a free dessert reward for your birthday.",
+      "evidenceHash": "4fcb7f7cf323",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "smoothie-king-us",
+      "brand": "Smoothie King",
+      "offer": "Free birthday smoothie",
+      "categories": [
+        "Food & drink"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership",
+        "App"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Redeem it in the brand’s app",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.smoothieking.com/rewards/",
+      "evidence": "$2 bonus reward because every champion deserves more 25% more points on every dollar spent, all year long Free birthday smoothie deal loaded directly to",
+      "evidenceHash": "a2a98564aae3",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "tropical-smoothie-us",
+      "brand": "Tropical Smoothie Cafe",
+      "offer": "Birthday reward for members",
+      "categories": [
+        "Food & drink"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [],
+      "steps": [
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.tropicalsmoothiecafe.com/rewards",
+      "evidence": "Enjoy a birthday reward!",
+      "evidenceHash": "ad584c1fe335",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "einstein-bros-us",
+      "brand": "Einstein Bros. Bagels",
+      "offer": "Free Egg Sandwich",
+      "categories": [
+        "Food & drink"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Purchase may be needed"
+      ],
+      "steps": [
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.einsteinbros.com/rewards/",
+      "evidence": "FREE Egg Sandwich with purchase for your birthday.",
+      "evidenceHash": "dda17602fbff",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "dairy-queen-us",
+      "brand": "Dairy Queen",
+      "offer": "Birthday treat",
+      "categories": [
+        "Sweet treats"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.dairyqueen.com/en-us/birthday/",
+      "evidence": "Get ready to devour this delightful birthday treat!",
+      "evidenceHash": "c9ab2a05a2c3",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "insomnia-cookies-us",
+      "brand": "Insomnia Cookies",
+      "offer": "Birthday Gift",
+      "categories": [
+        "Sweet treats"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://insomniacookies.com/products/6-happy-birthday-gift-box",
+      "evidence": "Do not sell or share my personal information Allow all Customize Allow selection Deny 6\" Happy Birthday Gift Box Accessibility Statement Rewards members: free delivery",
+      "evidenceHash": "d2c199a79603",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "nothing-bundt-cakes-us",
+      "brand": "Nothing Bundt Cakes",
+      "offer": "Free JOIN NOW",
+      "categories": [
+        "Sweet treats"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.nothingbundtcakes.com/product/build-a-birthday-cake/",
+      "evidence": "SHOP ALL BIRTHDAYS ENTER ZIP CODE OR CITY Search Use Current Location Shop All Cakes Occasions Promotion Details Gift Cards Find a Bakery Corporate Gifting",
+      "evidenceHash": "49e14a076b7b",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "chilis-us",
+      "brand": "Chili's",
+      "offer": "Free BIRTHDAY DESSERT",
+      "categories": [
+        "Food & drink"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [],
+      "steps": [
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.chilis.com/rewards",
+      "evidence": "FREE BIRTHDAY DESSERT Your special day comes with a sweet treat on us.",
+      "evidenceHash": "bca6184547e8",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "peets-us",
+      "brand": "Peet's Coffee",
+      "offer": "Free birthday drink",
+      "categories": [
+        "Coffee"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [],
+      "steps": [
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.peets.com/pages/peetnik-rewards",
+      "evidence": "Birthday & Anniversary Perks Get a free birthday drink and 25 points on your sign-up anniversary.",
+      "evidenceHash": "a4996d2a31e3",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "dutch-bros-us",
+      "brand": "Dutch Bros",
+      "offer": "Free DRINKS",
+      "categories": [
+        "Coffee"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership",
+        "App"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Redeem it in the brand’s app",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.dutchbros.com/golden-birthday/",
+      "evidence": "Golden Birthday | Dutch Bros Coffee Skip to main content Skip to footer Main menu LOCATIONS MENU REWARDS GIFT CARDS MERCH Dutch at Home ®",
+      "evidenceHash": "24e85c5762c1",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "marcos-us",
+      "brand": "Marco's Pizza",
+      "offer": "Birthday reward for members",
+      "categories": [
+        "Pizza",
+        "Food & drink"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership",
+        "Purchase may be needed"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Add your birthday to your account",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.marcos.com/myrewards/",
+      "evidence": "1 Point for every $1 spent $5 Reward Certificate automatically after $50 Birthday Bonus special reward when you include your birthday Earn every time you",
+      "evidenceHash": "33efcb83cf02",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "blaze-pizza-us",
+      "brand": "Blaze Pizza",
+      "offer": "Birthday reward for members",
+      "categories": [
+        "Pizza",
+        "Food & drink"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [],
+      "steps": [
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.blazepizza.com/rewards",
+      "evidence": "BIRTHDAY BONUS A treat on your special day.",
+      "evidenceHash": "609cd39441ed",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "american-eagle-us",
+      "brand": "American Eagle",
+      "offer": "Free shipping",
+      "categories": [
+        "Fashion"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership",
+        "Purchase may be needed"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.ae.com/us/en/myaccount/real-rewards",
+      "evidence": "* \"> 4-8% back in rewards on every purchase * Members-only sales, events & offers * \"> Unlock free shipping & returns, faster * $5",
+      "evidenceHash": "4dcc66813d6c",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "dave-and-busters-us",
+      "brand": "Dave & Buster's",
+      "offer": "Birthday reward for members",
+      "categories": [
+        "Movies & fun",
+        "Gaming"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [],
+      "steps": [
+        "Add your birthday to your account",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.daveandbusters.com/us/en/celebrate/kids-birthday",
+      "evidence": "For adults, we also offer delicious dessert choices that can be added to your birthday package.",
+      "evidenceHash": "d1ad3fab88d6",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "topgolf-us",
+      "brand": "Topgolf",
+      "offer": "Birthday reward for members",
+      "categories": [
+        "Movies & fun"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership",
+        "Purchase may be needed"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Add your birthday to your account",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://topgolf.com/uk/lp/birthday-party-venue/",
+      "evidence": "Teens & Kids Birthday Parties We also offer hosted kids and teens parties.",
+      "evidenceHash": "f3c78249ae9f",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "cinemark-us",
+      "brand": "Cinemark",
+      "offer": "Birthday reward for members",
+      "categories": [
+        "Movies & fun"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership",
+        "ID needed",
+        "Purchase may be needed"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Add your birthday to your account",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.cinemark.com/faqs/birthday-parties-faq",
+      "evidence": "Questions About Birthday Parties At Cinemark | We Can Help Shopping Cart Location Platinum Star Profile & Payment Scan Member ID Tickets Gift Card Sign",
+      "evidenceHash": "93cb2c3f1186",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "hot-topic-us",
+      "brand": "Hot Topic",
+      "offer": "40% Off",
+      "categories": [
+        "Fashion"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Purchase may be needed"
+      ],
+      "steps": [
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.hottopic.com/shop/birthday-cupcake/",
+      "evidence": "Birthday Cupcake | Hot Topic Skip to main content Spend Your Hot Cash Now* Shop Now Up To 40% Off Select Styles* Shop Now Up",
+      "evidenceHash": "cbf276c9b0eb",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "chuck-e-cheese-us",
+      "brand": "Chuck E. Cheese",
+      "offer": "Birthday reward for members",
+      "categories": [
+        "Kids & family",
+        "Movies & fun"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": true,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.chuckecheese.com/birthday-parties/",
+      "evidence": "Cheese | --> BONUS: Use promo code BDAYFREE to get your birthday star free when booking a Mega or Ultimate Birthday Party with 13+ kids!*",
+      "evidenceHash": "1f865c231a74",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-07",
+      "lastVerified": "2026-11-07",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    }
+  ]
+}

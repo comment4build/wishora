@@ -1,0 +1,428 @@
+{
+  "generatedAt": "2026-11-07T12:19:16.518Z",
+  "report": [
+    {
+      "id": "starbucks-us",
+      "status": "skipped",
+      "reason": "HTTP 404"
+    },
+    {
+      "id": "dunkin-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.dunkindonuts.com/rewards/"
+    },
+    {
+      "id": "krispy-kreme-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.krispykreme.com/rewards"
+    },
+    {
+      "id": "baskin-robbins-us",
+      "status": "skipped",
+      "reason": "The operation was aborted due to timeout"
+    },
+    {
+      "id": "cold-stone-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.coldstonecreamery.com/menu/cakes/birthday-cakes/"
+    },
+    {
+      "id": "panera-us",
+      "status": "skipped",
+      "reason": "fetch failed"
+    },
+    {
+      "id": "chipotle-us",
+      "status": "verified",
+      "confidence": "high",
+      "url": "https://www.chipotle.com/rewards"
+    },
+    {
+      "id": "taco-bell-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.tacobell.com/newsroom/taco-bell-and-milk-bar-launch-new-birthday-cake-churros-nationwide"
+    },
+    {
+      "id": "dennys-us",
+      "status": "skipped",
+      "reason": "HTTP 404"
+    },
+    {
+      "id": "ihop-us",
+      "status": "skipped",
+      "reason": "HTTP 403"
+    },
+    {
+      "id": "olive-garden-us",
+      "status": "skipped",
+      "reason": "The operation was aborted due to timeout"
+    },
+    {
+      "id": "applebees-us",
+      "status": "skipped",
+      "reason": "HTTP 403"
+    },
+    {
+      "id": "red-robin-us",
+      "status": "verified",
+      "confidence": "high",
+      "url": "https://www.redrobin.com/rewards"
+    },
+    {
+      "id": "buffalo-wild-wings-us",
+      "status": "verified",
+      "confidence": "high",
+      "url": "https://www.buffalowildwings.com/rewards/"
+    },
+    {
+      "id": "jersey-mikes-us",
+      "status": "skipped",
+      "reason": "HTTP 403"
+    },
+    {
+      "id": "panda-express-us",
+      "status": "skipped",
+      "reason": "HTTP 403"
+    },
+    {
+      "id": "dominos-us",
+      "status": "skipped",
+      "reason": "HTTP 404"
+    },
+    {
+      "id": "papa-johns-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.papajohns.com/contact-us/frequently-asked-papa-rewards-birthday-questions.html"
+    },
+    {
+      "id": "sephora-us",
+      "status": "skipped",
+      "reason": "HTTP 403"
+    },
+    {
+      "id": "ulta-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.ulta.com/discover/lifestyle/birthday-gifts-for-best-friend"
+    },
+    {
+      "id": "bath-body-works-us",
+      "status": "skipped",
+      "reason": "HTTP 307"
+    },
+    {
+      "id": "victorias-secret-us",
+      "status": "skipped",
+      "reason": "HTTP 404"
+    },
+    {
+      "id": "old-navy-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://oldnavy.gap.com/browse/toddler-girls/bestest-birthday-shop?cid=3044214"
+    },
+    {
+      "id": "barnes-noble-us",
+      "status": "skipped",
+      "reason": "HTTP 404"
+    },
+    {
+      "id": "build-a-bear-us",
+      "status": "skipped",
+      "reason": "HTTP 403"
+    },
+    {
+      "id": "regal-us",
+      "status": "skipped",
+      "reason": "HTTP 403"
+    },
+    {
+      "id": "amc-us",
+      "status": "skipped",
+      "reason": "HTTP 403"
+    },
+    {
+      "id": "petsmart-us",
+      "status": "skipped",
+      "reason": "fetch failed"
+    },
+    {
+      "id": "petco-us",
+      "status": "skipped",
+      "reason": "HTTP 403"
+    },
+    {
+      "id": "michaels-us",
+      "status": "skipped",
+      "reason": "page has no birthday reward"
+    },
+    {
+      "id": "joann-us",
+      "status": "skipped",
+      "reason": "redirected off the brand's domain"
+    },
+    {
+      "id": "starbucks-gb",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.starbucks.co.uk/rewards"
+    },
+    {
+      "id": "krispy-kreme-gb",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.krispykreme.co.uk/shop/doughnuts-by-range/birthday.html"
+    },
+    {
+      "id": "sephora-gb",
+      "status": "skipped",
+      "reason": "HTTP 403"
+    },
+    {
+      "id": "rituals-be",
+      "status": "skipped",
+      "reason": "HTTP 404"
+    },
+    {
+      "id": "hm-be",
+      "status": "skipped",
+      "reason": "HTTP 403"
+    },
+    {
+      "id": "nandos-gb",
+      "status": "skipped",
+      "reason": "HTTP 404"
+    },
+    {
+      "id": "costa-gb",
+      "status": "skipped",
+      "reason": "The operation was aborted due to timeout"
+    },
+    {
+      "id": "chick-fil-a-us",
+      "status": "skipped",
+      "reason": "fetch failed"
+    },
+    {
+      "id": "wendys-us",
+      "status": "skipped",
+      "reason": "HTTP 404"
+    },
+    {
+      "id": "burger-king-us",
+      "status": "skipped",
+      "reason": "page has no birthday reward"
+    },
+    {
+      "id": "mcdonalds-us",
+      "status": "skipped",
+      "reason": "HTTP 403"
+    },
+    {
+      "id": "sonic-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.sonicdrivein.com/rewards/"
+    },
+    {
+      "id": "arbys-us",
+      "status": "skipped",
+      "reason": "HTTP 404"
+    },
+    {
+      "id": "popeyes-us",
+      "status": "skipped",
+      "reason": "too little text: page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.popeyes.com/offers\", waiting until \"networkidle\"\n"
+    },
+    {
+      "id": "kfc-us",
+      "status": "skipped",
+      "reason": "The operation was aborted due to timeout"
+    },
+    {
+      "id": "wingstop-us",
+      "status": "skipped",
+      "reason": "page has no birthday reward"
+    },
+    {
+      "id": "qdoba-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.qdoba.com/rewards"
+    },
+    {
+      "id": "moes-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.moes.com/rewards"
+    },
+    {
+      "id": "noodles-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.noodles.com/rewards"
+    },
+    {
+      "id": "smoothie-king-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.smoothieking.com/rewards/"
+    },
+    {
+      "id": "tropical-smoothie-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.tropicalsmoothiecafe.com/rewards"
+    },
+    {
+      "id": "einstein-bros-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.einsteinbros.com/rewards/"
+    },
+    {
+      "id": "dairy-queen-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.dairyqueen.com/en-us/birthday/"
+    },
+    {
+      "id": "insomnia-cookies-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://insomniacookies.com/products/6-happy-birthday-gift-box"
+    },
+    {
+      "id": "nothing-bundt-cakes-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.nothingbundtcakes.com/product/build-a-birthday-cake/"
+    },
+    {
+      "id": "texas-roadhouse-us",
+      "status": "skipped",
+      "reason": "HTTP 404"
+    },
+    {
+      "id": "chilis-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.chilis.com/rewards"
+    },
+    {
+      "id": "peets-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.peets.com/pages/peetnik-rewards"
+    },
+    {
+      "id": "caribou-us",
+      "status": "skipped",
+      "reason": "HTTP 403"
+    },
+    {
+      "id": "dutch-bros-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.dutchbros.com/golden-birthday/"
+    },
+    {
+      "id": "pizza-hut-us",
+      "status": "skipped",
+      "reason": "The operation was aborted due to timeout"
+    },
+    {
+      "id": "marcos-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.marcos.com/myrewards/"
+    },
+    {
+      "id": "blaze-pizza-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.blazepizza.com/rewards"
+    },
+    {
+      "id": "lush-us",
+      "status": "skipped",
+      "reason": "HTTP 403"
+    },
+    {
+      "id": "sally-beauty-us",
+      "status": "skipped",
+      "reason": "page has no birthday reward"
+    },
+    {
+      "id": "kohls-us",
+      "status": "skipped",
+      "reason": "HTTP 403"
+    },
+    {
+      "id": "hollister-us",
+      "status": "skipped",
+      "reason": "HTTP 404"
+    },
+    {
+      "id": "american-eagle-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.ae.com/us/en/myaccount/real-rewards"
+    },
+    {
+      "id": "torrid-us",
+      "status": "skipped",
+      "reason": "HTTP 410"
+    },
+    {
+      "id": "yankee-candle-us",
+      "status": "skipped",
+      "reason": "HTTP 403"
+    },
+    {
+      "id": "dave-and-busters-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.daveandbusters.com/us/en/celebrate/kids-birthday"
+    },
+    {
+      "id": "topgolf-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://topgolf.com/uk/lp/birthday-party-venue/"
+    },
+    {
+      "id": "cinemark-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.cinemark.com/faqs/birthday-parties-faq"
+    },
+    {
+      "id": "hot-topic-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.hottopic.com/shop/birthday-cupcake/"
+    },
+    {
+      "id": "gamestop-us",
+      "status": "skipped",
+      "reason": "HTTP 403"
+    },
+    {
+      "id": "chuck-e-cheese-us",
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.chuckecheese.com/birthday-parties/"
+    },
+    {
+      "id": "books-a-million-us",
+      "status": "skipped",
+      "reason": "HTTP 403"
+    }
+  ]
+}
