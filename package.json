@@ -1,0 +1,2 @@
+{"name":"wishora","private":true,"type":"module","engines":{"node":">=20"},
+ "scripts":{"refresh":"node pipeline/run.mjs","test":"node pipeline/test.mjs"}}

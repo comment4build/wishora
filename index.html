@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wishora – your birthday, planned</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4EBDD;--surface:#FCF7EE;--ink:#2B0F14;--mute:#7A5C58;--line:#E3D3BD;--accent:#B3122E;--accent-ink:#FFF6EC;--gold:#E3A33B;--ok:#3F7D58;--warn:#A8501A;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1E0A0E;--surface:#2B1218;--ink:#F6EBDD;--mute:#C9AFA4;--line:#4A2229;--accent:#FF4D6A;--accent-ink:#2B0F14;--ok:#7FCB9B;--warn:#FFA86B;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1E0A0E;--surface:#2B1218;--ink:#F6EBDD;--mute:#C9AFA4;--line:#4A2229;--accent:#FF4D6A;--accent-ink:#2B0F14;--ok:#7FCB9B;--warn:#FFA86B;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 "Instrument Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;line-height:1.08;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:20px 20px 64px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:6px 0 28px}
+.logo{font:800 22px "Bricolage Grotesque",sans-serif;letter-spacing:-.02em}
+.logo i{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--gold);margin-right:8px}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:36px;align-items:start}
+.hero h1{font-size:clamp(38px,6vw,64px);font-weight:800;letter-spacing:-.03em}
+.hero p.lead{font-size:18px;color:var(--mute);max-width:46ch;margin:18px 0 22px}
+.pillars{list-style:none;padding:0;margin:0;display:grid;gap:10px;max-width:46ch}
+.pillars li{padding-left:18px;position:relative;font-size:15px}
+.pillars li:before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;border-radius:2px;background:var(--gold)}
+form.card{background:var(--surface);border:1.5px solid var(--ink);border-radius:18px;padding:22px;box-shadow:6px 6px 0 var(--gold)}
+label,.lab{display:block;font-weight:600;font-size:14px;margin:0 0 6px}
+.opt{font-weight:400;color:var(--mute)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.f{margin-bottom:14px}.row .f{margin:0}
+input,select{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px}
+input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chip{border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:6px 12px;font:500 14px inherit;font-family:inherit;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip.brand{background:var(--gold);color:#14172B;border-color:var(--gold)}
+.btn{font:600 16px "Instrument Sans",sans-serif;background:var(--accent);color:var(--accent-ink);border:0;border-radius:12px;padding:13px 20px;cursor:pointer;width:100%}
+.btn.small{width:auto;padding:8px 14px;font-size:14px}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.priv{font-size:13px;color:var(--mute);margin:10px 0 0}
+#results{margin-top:56px}
+.sumbar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:end;margin-bottom:10px}
+.sumbar h2{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.02em}
+.count{font:800 54px "Bricolage Grotesque",sans-serif;line-height:1;color:var(--accent)}
+.count small{display:block;font:500 13px "Instrument Sans",sans-serif;color:var(--mute);margin-top:4px}
+.progress{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin:14px 0 6px}
+.progress b{display:block;height:100%;background:var(--ok);width:0;transition:width .3s}
+.note{background:var(--surface);border:1.5px dashed var(--line);border-radius:12px;padding:12px 14px;font-size:14px;color:var(--mute);margin:16px 0}
+.group{margin-top:34px}.group>h3{font-size:22px;font-weight:800;margin-bottom:4px}.group>p{margin:0 0 14px;color:var(--mute);font-size:14px}
+.deals{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.deal{background:var(--surface);border:1.5px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.deal.done{opacity:.6}
+.deal.sp{border-color:var(--gold)}
+.dh{display:flex;justify-content:space-between;gap:10px;align-items:start}
+.dh h3{font-size:22px;font-weight:800}
+.offer{font-weight:600}
+.why{font-size:13px;color:var(--mute)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:12px;font-weight:600;padding:3px 9px;border-radius:6px;background:var(--bg);border:1px solid var(--line)}
+.tag.warn{color:var(--warn);border-color:var(--warn)}.tag.ok{color:var(--ok);border-color:var(--ok)}.tag.gold{background:var(--gold);color:#14172B;border-color:var(--gold)}
+.win{font-size:14px;border-left:4px solid var(--gold);padding-left:10px}
+details{font-size:14px}summary{cursor:pointer;font-weight:600}
+details ol{margin:8px 0 0;padding-left:20px;color:var(--mute)}
+.acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.acts a{text-decoration:none;display:inline-block}
+.link{background:none;border:0;color:var(--mute);font:inherit;font-size:13px;text-decoration:underline;cursor:pointer;padding:8px 2px}
+footer{margin-top:60px;font-size:13px;color:var(--mute);border-top:1px solid var(--line);padding-top:18px}
+.dash{display:grid;grid-template-columns:1.3fr 1fr;gap:14px;margin-bottom:44px}
+.tile{border-radius:18px;padding:22px;border:1.5px solid var(--ink)}
+.cd{background:var(--ink);color:var(--bg)}
+.cd .nums{display:flex;gap:20px;margin:12px 0 4px}
+.cd .n{font:800 clamp(34px,6vw,58px)/1 "Bricolage Grotesque",sans-serif;font-variant-numeric:tabular-nums;display:block}
+.cd .u{font-size:12px;opacity:.7}
+.sv{background:var(--gold);border-color:var(--gold);color:#14172B}
+.sv .big{font:800 clamp(38px,6vw,58px)/1 "Bricolage Grotesque",sans-serif;display:block;margin:10px 0 4px}
+.sv p{margin:6px 0 0;font-size:14px}
+.panel{background:var(--surface);border:1.5px solid var(--line);border-radius:18px;padding:20px}
+.panel h3{font-size:20px;font-weight:800}
+.ev{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:10px}
+.ev li{display:flex;gap:14px;align-items:baseline;font-size:15px}
+.ev time{font-weight:600;min-width:70px;color:var(--accent)}
+.ev .j{color:var(--warn)}
+.empty{color:var(--mute);font-size:14px;margin:10px 0 0}
+@media(max-width:820px){.dash{grid-template-columns:1fr}}
+.cal{margin-bottom:44px}.cal>h2{font-size:clamp(26px,4vw,36px);font-weight:800;letter-spacing:-.02em}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--mute);margin:8px 0 16px}
+.legend span:before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;background:var(--mute)}
+.legend .k1:before,.dt.k1{background:var(--gold)}.legend .k2:before,.dt.k2{background:var(--ok)}.legend .k3:before,.dt.k3{background:var(--accent)}
+.legend .lb:before{background:none;border:2px solid var(--accent)}.legend .lo:before{border-radius:3px;background:color-mix(in srgb,var(--ok) 25%,transparent)}
+.months{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:18px}
+.mo{background:var(--surface);border:1.5px solid var(--line);border-radius:18px;padding:16px}.mo h3{font-size:18px;font-weight:800;margin-bottom:10px}
+.g{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;text-align:center;font-size:13px}.g b{color:var(--mute);font-weight:500;font-size:12px}
+.c{aspect-ratio:1;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+.c.o{background:color-mix(in srgb,var(--ok) 20%,transparent)}.c.bd{outline:2px solid var(--accent);font-weight:800}.c.td{text-decoration:underline;font-weight:800}
+.dts{display:flex;gap:2px;height:6px}.dt{width:6px;height:6px;border-radius:50%}
+.due{border:1.5px solid var(--gold);color:var(--ink)}
+.agl{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.ag{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;padding:10px 0;border-top:1px solid var(--line);font-size:15px}
+.ag time{font-weight:600;min-width:58px}.ag .tx{flex:1 1 220px}.ag .ra{display:flex;gap:10px;align-items:center}
+.kd{font-size:12px;font-weight:600;padding:2px 8px;border-radius:6px;color:#14172B}.kd.k1{background:var(--gold)}.kd.k2{background:var(--ok);color:var(--bg)}.kd.k3{background:var(--accent);color:var(--accent-ink)}
+.logo i{background:var(--accent)}form.card{box-shadow:6px 6px 0 var(--accent)}
+.chip.brand,.tag.gold,.sv,.kd{color:#2B0F14}
+.tabs{display:flex;gap:6px;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:10px 0;margin-bottom:20px;overflow-x:auto;border-bottom:1.5px solid var(--line)}
+.tab{font:600 15px "Instrument Sans",sans-serif;white-space:nowrap;border:0;background:transparent;color:var(--mute);padding:10px 18px;border-radius:999px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--accent);color:var(--accent-ink)}
+.tab .ct{opacity:.75;margin-left:4px;font-weight:500}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);flex-wrap:wrap;gap:8px 20px;padding:12px 0;margin-bottom:26px;border-bottom:1.5px solid var(--line)}
+header.top .tabs{position:static;flex:1 1 auto;min-width:0;justify-content:flex-end;margin:0;padding:0;border:0;background:none}
+.tab:disabled{opacity:.4;cursor:not-allowed}.hero[hidden]{display:none}#results{margin-top:0}
+@media(max-width:640px){header.top .tabs{justify-content:flex-start;flex-basis:100%}}
+.aih{font-size:clamp(26px,4vw,36px);font-weight:800;letter-spacing:-.02em}
+.log{display:grid;gap:12px;margin:18px 0 6px}
+.msg{padding:12px 14px;border-radius:14px;max-width:min(680px,94%);white-space:pre-wrap;font-size:15px}
+.msg.u{justify-self:end;background:var(--accent);color:var(--accent-ink)}
+.msg.a{background:var(--surface);border:1.5px solid var(--line)}
+.picks{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;white-space:normal}
+.askrow{display:flex;gap:8px;position:sticky;bottom:0;padding:12px 0;background:var(--bg)}.askrow input{flex:1}
+.sr{position:absolute;left:-9999px}
+@media(max-width:820px){.hero{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><div class="logo"><i></i>Wishora</div><nav class="tabs" id="tabbar" role="tablist" aria-label="Sections"></nav></header>
+
+<section class="hero" id="hero">
+  <div>
+    <h1>Your birthday, planned before it arrives.</h1>
+    <p class="lead">Most birthday freebies need a sign-up days or weeks ahead. Tell us a little about you and we’ll build a dated checklist of what to join, when, and how to claim it.</p>
+    <ul class="pillars">
+      <li>Join-by dates, so you never miss a deal that needed an account first.</li>
+      <li>Every deal shows what you’ll need: app, ID, membership, in-store or online.</li>
+      <li>Marked claimed, or broken, by you. Sponsored deals are labelled and never change your ranking.</li>
+    </ul>
+  </div>
+
+  <form class="card" id="form" novalidate>
+    <p class="note gate" id="gate" role="status" hidden>Add your birthday and country, then press “Build my birthday plan”. The other tabs unlock once your plan is built.</p>
+    <div class="row">
+      <div class="f"><label for="bd">Birthday</label><input type="date" id="bd" required></div>
+      <div class="f"><label for="age">Age <span class="opt">(optional)</span></label><input type="number" id="age" min="1" max="110" inputmode="numeric" placeholder="e.g. 29"></div>
+    </div>
+    <div class="row">
+      <div class="f"><label for="country">Country</label><select id="country" required></select></div>
+      <div class="f"><label for="city">City</label><input id="city" autocomplete="address-level2" placeholder="e.g. Brussels"></div>
+    </div>
+    <div class="f"><label for="brandIn">Favourite brands</label>
+      <input id="brandIn" list="brandList" placeholder="Type a brand, press Enter">
+      <datalist id="brandList"></datalist>
+      <div class="chips" id="brandChips" aria-live="polite"></div></div>
+    <div class="f"><span class="lab">Interests</span><div class="chips" id="interests"></div></div>
+    <button class="btn" type="submit">Build my birthday plan</button>
+    <p class="priv">Everything stays in this browser. Nothing is uploaded.</p>
+  </form>
+</section>
+
+<section id="results" hidden aria-live="polite"></section>
+<section id="ai" hidden>
+<h2 class="aih">Birthday assistant</h2>
+<p class="why" style="margin:8px 0 18px;max-width:60ch">Ask what to claim first, what fits your budget, or how to spend the day. Answers use only the deals in your plan.</p>
+<div class="f"><span class="lab">Your budget for claiming deals</span><div class="chips" id="budChips"></div></div>
+<div class="chips" id="sugg"></div>
+<div id="log" class="log" role="log" aria-live="polite"></div>
+<div class="askrow"><input id="q" placeholder="Ask about your deals…" maxlength="300" aria-label="Your question"><button class="btn small" id="ask" type="button">Ask</button></div>
+<p class="priv">To answer, your plan details (birthday, country, city, interests, brands, budget) are sent to Claude. Offers are unverified samples, so check terms with the brand.</p>
+</section>
+
+<footer>Deals are checked against each brand’s own website and show when they were last verified. Offers change often, so confirm the terms with the brand before you rely on one. If a deal fails, use “Report not working”.</footer>
+</div>
+
+<script>
+(function(){
+var KEY="wishora:v1";
+var COUNTRIES=[["BE","Belgium"],["GB","United Kingdom"],["US","United States"],["FR","France"],["NL","Netherlands"],["DE","Germany"],["IE","Ireland"],["CA","Canada"],["AU","Australia"],["XX","Somewhere else"]];
+var INTERESTS=["Food & drink","Coffee","Sweet treats","Beauty","Fashion","Books","Kids & family","Pizza","Self-care"];
+// id, brand, offer, tags, countries, type(day|week|month), from, to, join(days ahead you must be a member), needs, steps, sponsored
+var D=[
+["sbx","Starbucks","A free drink for rewards members",["Coffee","Food & drink"],["US","GB","CA","AU","BE","FR","NL","DE","IE"],"month",0,0,0,["App","Membership"],["Join the rewards programme in the app","Check the offer in the app near your birthday","Show the app code at the counter"]],
+["kk","Krispy Kreme","A birthday doughnut for club members",["Sweet treats","Food & drink"],["US","GB","CA","AU","IE"],"week",0,7,0,["App","In-store"],["Create a club or app account","Open the birthday reward in the app","Show it at a participating shop"]],
+["sph","Sephora","A birthday gift for loyalty members",["Beauty","Self-care"],["US","GB","FR","BE","NL","DE","CA","AU","IE"],"month",0,0,30,["Membership","In-store or online"],["Join the free loyalty programme","Add your birthday to your profile","Redeem the gift in store or online during your month"]],
+["hm","H&M","A birthday voucher for members",["Fashion"],["BE","GB","US","FR","NL","DE","IE","CA","AU"],"month",0,0,14,["Membership","Online or in-store"],["Join H&M Member and add your birthday","Find the voucher in your account","Apply at checkout or show it in store"]],
+["rit","Rituals","A birthday gift for members",["Self-care","Beauty"],["BE","NL","DE","FR","GB"],"month",0,0,14,["Membership","In-store"],["Create a free account","Add your birthday","Collect your gift in store"]],
+["pzx","PizzaExpress","A birthday treat for club members",["Pizza","Food & drink"],["GB","IE"],"week",-3,3,7,["Membership","Booking"],["Join the club with your birthday","Book a table","Show your voucher before ordering"]],
+["nan","Nando’s","A birthday perk for app users",["Food & drink"],["GB","IE","AU","CA"],"day",0,0,7,["App","ID may be asked"],["Sign up in the app","Add your birthday","Show the app offer when you order"]],
+["dnk","Dunkin’","A birthday treat for rewards members",["Coffee","Sweet treats"],["US","CA"],"week",0,7,0,["App","In-store"],["Join the rewards programme","Open the birthday reward in the app","Scan it at checkout"]],
+["bsk","Baskin-Robbins","A birthday scoop for rewards members",["Sweet treats"],["US","CA","AU"],"month",0,0,7,["App"],["Join the rewards programme","Open the offer in the app","Show it at the counter"]],
+["bab","Build-A-Bear","A birthday offer for kids’ club members",["Kids & family"],["US","GB","CA","IE","AU"],"month",0,0,14,["Membership","In-store"],["Join the club with the child’s birthday","Receive the offer","Bring it to the workshop"],"kids"],
+["bn","Barnes & Noble","A birthday treat for members",["Books"],["US"],"month",0,0,0,["Membership"],["Join the free membership","Add your birthday","Use the offer in store"]],
+["ulta","Ulta Beauty","A birthday gift for loyalty members",["Beauty","Self-care"],["US"],"month",0,0,0,["Membership"],["Join the loyalty programme","Add your birthday","Claim in store or online"]]
+];
+var SPONSOR={id:"spon",brand:"Your brand here",offer:"Sponsored: an official birthday offer, clearly labelled",sp:true};
+var BRANDS=D.map(function(d){return d[1]});
+var st=load();
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return {}}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}}
+function $(i){return document.getElementById(i)}
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function norm(s){return s.toLowerCase().replace(/[’']/g,"").replace(/[^a-z0-9]/g,"")}
+
+var brands=st.brands||[],ints=st.ints||[];
+$("country").innerHTML=COUNTRIES.map(function(c){return '<option value="'+c[0]+'">'+c[1]+'</option>'}).join("");
+$("brandList").innerHTML=BRANDS.map(function(b){return '<option value="'+esc(b)+'">'}).join("");
+if(st.bd)$("bd").value=st.bd;if(st.age)$("age").value=st.age;if(st.country)$("country").value=st.country;if(st.city)$("city").value=st.city;
+function drawBrands(){$("brandChips").innerHTML=brands.map(function(b,i){return '<button type="button" class="chip brand" data-i="'+i+'" aria-label="Remove '+esc(b)+'">'+esc(b)+' ×</button>'}).join("")}
+function drawInts(){$("interests").innerHTML=INTERESTS.map(function(x){return '<button type="button" class="chip" aria-pressed="'+(ints.indexOf(x)>-1)+'">'+esc(x)+'</button>'}).join("")}
+drawBrands();drawInts();
+$("brandChips").onclick=function(e){var b=e.target.closest("button");if(b){brands.splice(+b.dataset.i,1);drawBrands()}};
+$("interests").onclick=function(e){var b=e.target.closest("button");if(!b)return;var x=b.textContent,i=ints.indexOf(x);i>-1?ints.splice(i,1):ints.push(x);drawInts()};
+function addBrand(){var v=$("brandIn").value.trim().replace(/,$/,"");if(v&&brands.map(norm).indexOf(norm(v))<0&&brands.length<12){brands.push(v);drawBrands()}$("brandIn").value=""}
+$("brandIn").onkeydown=function(e){if(e.key==="Enter"||e.key===","){e.preventDefault();addBrand()}};
+$("brandIn").onchange=addBrand;
+
+function addDays(d,n){var x=new Date(d);x.setDate(x.getDate()+n);return x}
+function fmt(d){return d.toLocaleDateString("en-GB",{day:"numeric",month:"short"})}
+function daysBetween(a,b){return Math.round((b-a)/864e5)}
+
+function build(p){
+  var today=new Date();today.setHours(0,0,0,0);
+  var parts=p.bd.split("-").map(Number),next=new Date(today.getFullYear(),parts[1]-1,parts[2]);
+  if(next<today)next=new Date(today.getFullYear()+1,parts[1]-1,parts[2]);
+  var yr=next.getFullYear(),dim=new Date(yr,next.getMonth()+1,0).getDate(),bday=next.getDate();
+  var age=p.age?+p.age:null,bset=p.brands.map(norm);
+  var list=D.map(function(r){
+    var d={id:r[0],brand:r[1],offer:r[2],tags:r[3],ctry:r[4],type:r[5],from:r[6],to:r[7],join:r[8],needs:r[9],steps:r[10],kids:r[11]==="kids",src:r[12]};
+    var local=d.ctry.indexOf(p.country)>-1;
+    if(p.country!=="XX"&&!local)return null;
+    if(d.kids&&age&&age>14&&ints.indexOf("Kids & family")<0)return null;
+    var score=0,why=[];
+    if(bset.indexOf(norm(d.brand))>-1){score+=60;why.push("One of your favourite brands")}
+    var hit=d.tags.filter(function(t){return p.ints.indexOf(t)>-1});
+    if(hit.length){score+=14*hit.length;why.push("Matches "+hit.join(" and ").toLowerCase())}
+    if(local&&p.country!=="XX")score+=6;
+    if(!why.length)why.push("Available in "+(COUNTRIES.filter(function(c){return c[0]===p.country})[0]||["",""])[1]);
+    var s,e;
+    if(d.type==="month"){s=addDays(next,-(bday-1));e=addDays(next,dim-bday)}else{s=addDays(next,d.from);e=addDays(next,d.to)}
+    d.start=s;d.end=e;d.joinBy=d.join?addDays(s,-d.join):null;
+    d.left=d.joinBy?daysBetween(today,d.joinBy):null;
+    d.score=score;d.why=why.join(" · ");
+    return d}).filter(Boolean);
+  list.sort(function(a,b){return b.score-a.score||a.brand.localeCompare(b.brand)});
+  return {list:list,next:next,days:daysBetween(today,next),yr:yr,age:age,today:today}
+}
+function mapsUrl(b,c){return "https://www.google.com/maps/search/"+encodeURIComponent(b+" "+(c||""))}
+function card(d,p,R){
+  var key=d.id+"-"+R.yr,done=(st.done||{})[key],rep=(st.rep||{})[d.id]||0;
+  var urgent=d.joinBy&&d.left>=0&&d.left<=7,missed=d.joinBy&&d.left<0;
+  var tags=d.needs.map(function(n){return '<span class="tag">'+esc(n)+'</span>'}).join("");
+  if(d.src){tags+='<span class="tag ok">Verified '+esc(fmtISO(d.src.lastVerified))+(d.src.stale?' · not re-checked recently':'')+'</span>'+(d.src.timingVerified===false?'<span class="tag warn">Check timing</span>':'')}else tags+='<span class="tag warn">Unverified sample</span>';
+  if(d.joinBy)tags+='<span class="tag '+(missed?"warn":urgent?"gold":"")+'">'+(missed?"Join date passed":"Join by "+fmt(d.joinBy)+(d.left>=0?" ("+d.left+" days)":""))+'</span>';
+  var win=d.type==="day"&&+d.from===0?fmt(d.start):fmt(d.start)+" to "+fmt(d.end);
+  return '<article class="deal'+(done?" done":"")+'"><div class="dh"><h3>'+esc(d.brand)+'</h3></div>'
+   +'<div class="offer">'+esc(d.offer)+'</div><div class="why">'+esc(d.why)+'</div>'
+   +'<div class="win">Claim window: <strong>'+win+'</strong></div><div class="tags">'+tags+'</div>'
+   +'<details><summary>How to claim</summary><ol>'+d.steps.map(function(s){return '<li>'+esc(s)+'</li>'}).join("")+'</ol>'+(d.src?'<p class="why" style="margin:8px 0 0"><a href="'+esc(d.src.url)+'" target="_blank" rel="noopener">See the brand’s own terms</a></p>':'')+'</details>'
+   +'<div class="acts"><button class="btn small" data-act="done" data-k="'+key+'">'+(done?"Claimed ✓":"Mark as claimed")+'</button>'
+   +'<a class="btn small ghost" target="_blank" rel="noopener" href="'+mapsUrl(d.brand,p.city)+'">Find near '+esc(p.city||"me")+'</a>'
+   +'<button class="btn small ghost" data-act="save" data-id="'+d.id+'" aria-pressed="'+!!(st.saved||{})[d.id]+'">'+((st.saved||{})[d.id]?"Saved ★":"Save ☆")+'</button>'+'<button class="link" data-act="rep" data-id="'+d.id+'">'+(rep?"Reported ("+rep+")":"Report not working")+'</button></div></article>'
+}
+function render(p){
+  var R=build(p),L=R.list,doneN=L.filter(function(d){return (st.done||{})[d.id+"-"+R.yr]}).length;
+  var act=L.filter(function(d){return d.joinBy&&d.left>=0}).sort(function(a,b){return a.left-b.left});
+  var rest=L.filter(function(d){return act.indexOf(d)<0});
+  var ageTxt=R.age?" You turn "+(R.age+(R.next.getFullYear()-R.today.getFullYear()>0&&R.days>0&&false?0:1))+".":"";
+  var h='<div class="pane" data-p="ov" role="tabpanel"'+hid("ov")+'>'+dash(R,L,p,doneN)+'</div><div class="pane" data-p="cal" role="tabpanel"'+hid("cal")+'>'+cal(R,L,p)+'</div><div class="pane" data-p="deals" role="tabpanel"'+hid("deals")+'><div class="sumbar"><div><h2>All your matches</h2><p class="why" style="margin:6px 0 0">Ranked for you'+esc(p.city?", set for "+p.city:"")+'.</p></div><div class="count">'+L.length+'<small>matched deals</small></div></div>'
+   +'<div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="'+L.length+'" aria-valuenow="'+doneN+'"><b style="width:'+(L.length?doneN/L.length*100:0)+'%"></b></div><div class="why">'+doneN+' of '+L.length+' claimed</div>';
+  if(!L.length)h+='<div class="note">No listings for this country yet. Pick another country to see how it works.</div>';
+  if(act.length)h+='<div class="group"><h3>Join soon</h3><p>These need an account before your birthday window opens. Sorted by what’s most urgent.</p><div class="deals">'+act.map(function(d){return card(d,p,R)}).join("")+'</div></div>';
+  if(rest.length)h+='<div class="group"><h3>Ready when your day comes</h3><p>Best matches first.</p><div class="deals">'+rest.map(function(d){return card(d,p,R)}).join("")+'</div></div>';
+  h+='<div class="group"><h3>Sponsored</h3><p>Brands can pay for a clearly labelled slot. It never affects the order above.</p><div class="deals"><article class="deal sp"><div class="tags"><span class="tag gold">Sponsored</span></div><h3 style="font-size:22px;font-weight:800">'+SPONSOR.brand+'</h3><div class="offer">'+SPONSOR.offer+'</div><div class="why">Brands must verify the offer and keep terms current to appear here.</div></article></div></div>';
+  var el=$("results");var svL=L.filter(function(d){return (st.saved||{})[d.id]});h+='</div><div class="pane" data-p="sv" role="tabpanel"'+hid("sv")+'>'+(svL.length?'<div class="deals">'+svL.map(function(d){return card(d,p,R)}).join("")+'</div>':'<div class="note">Nothing saved yet. Use “Save ☆” on a deal in the Deals tab.</div>')+'</div>';el.innerHTML=h;el.hidden=tab==="plan"||tab==="ai";plan={R:R,L:L,p:p};drawTabs(L);startCd(R);
+  return R}
+var VAL={sbx:5,kk:2,sph:15,hm:10,rit:10,pzx:10,nan:8,dnk:3,bsk:4,bab:10,bn:5,ulta:10},SYM={GB:"£",US:"$",CA:"$",AU:"$"},timer,target=0;
+function tick(){var ms=Math.max(0,target-Date.now()),v=[Math.floor(ms/864e5),Math.floor(ms/36e5)%24,Math.floor(ms/6e4)%60,Math.floor(ms/1e3)%60];["d","h","m","s"].forEach(function(k,i){var e=$("cd-"+k);if(e)e.textContent=k==="d"?v[i]:String(v[i]).padStart(2,"0")})}
+function startCd(R){clearInterval(timer);target=R.next.getTime();tick();timer=setInterval(tick,1000)}
+function dash(R,L,p,doneN){
+ var s=SYM[p.country]||"€",pot=0,got=0,T=R.today.getTime();
+ L.forEach(function(d){var v=VAL[d.id]||0;if((st.done||{})[d.id+"-"+R.yr])got+=v;else pot+=v});
+ var saved=L.filter(function(d){return (st.saved||{})[d.id]}),ev=[];
+ L.forEach(function(d){
+  if(d.joinBy&&d.left>=0)ev.push({t:d.joinBy,x:"Join "+d.brand,j:1});
+  if(d.end>=R.today)ev.push({t:d.start<R.today?R.today:d.start,x:d.brand+(d.start<=R.today?" is open now":" window opens")})});
+ ev.sort(function(a,b){return a.t-b.t});ev=ev.slice(0,6);
+ var evH=ev.length?'<ul class="ev">'+ev.map(function(e){return '<li><time>'+(e.t.getTime()===T?"Today":fmt(e.t))+'</time><span'+(e.j?' class="j"':'')+'>'+esc(e.x)+'</span></li>'}).join("")+'</ul>':'<p class="empty">Nothing upcoming right now.</p>';
+ var svH=saved.length?'<ul class="ev">'+saved.map(function(d){return '<li><span><strong>'+esc(d.brand)+'</strong> <span class="why">worth about '+s+(VAL[d.id]||0)+'</span></span><button class="link" data-act="save" data-id="'+d.id+'">Remove</button></li>'}).join("")+'</ul>':'<p class="empty">Tap “Save” on any deal in the Deals tab to keep it here.</p>';
+ return '<div class="dash"><div class="tile cd"><strong>Until your birthday</strong>'+(R.days===0?'<div class="n" style="margin-top:10px">It’s today 🎂</div>':'')+'<div class="nums" role="timer" aria-live="off"><div><span class="n" id="cd-d">0</span><span class="u">days</span></div><div><span class="n" id="cd-h">00</span><span class="u">hours</span></div><div><span class="n" id="cd-m">00</span><span class="u">min</span></div><div><span class="n" id="cd-s">00</span><span class="u">sec</span></div></div><span class="u">'+fmt(R.next)+'</span></div>'
+ +'<div class="tile sv"><strong>Potential savings</strong><span class="big">'+((pot+got)?s+pot:"—")+'</span><p>'+((pot+got)?s+got+' claimed so far':'Deal values not set yet')+' · '+doneN+' of '+L.length+' deals</p><p style="opacity:.75;font-size:12px">Rough estimates of typical reward value. Real value varies by brand and terms.</p></div>'
+ +'<div class="panel"><h3>Coming up</h3>'+evH+'</div><div class="panel"><h3>Saved deals</h3>'+svH+'</div></div>'}
+function ymd(d){return d.getFullYear()+("0"+(d.getMonth()+1)).slice(-2)+("0"+d.getDate()).slice(-2)}
+function gcal(e){var n=addDays(e.t,1);return "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent("Wishora: "+e.x)+"&dates="+ymd(e.t)+"/"+ymd(n)+"&details="+encodeURIComponent("Check the current terms with "+e.d.brand+" before you go.")}
+function cal(R,L,p){
+ var T=R.today,E=[],KC={join:"k1",open:"k2",end:"k3"},KL={join:"Sign up",open:"Opens",end:"Expires"},ord={join:0,open:1,end:2};
+ L.forEach(function(d){var one=+d.start===+d.end;
+  if(d.joinBy&&d.joinBy>=T)E.push({d:d,k:"join",t:d.joinBy,x:"Last day to join "+d.brand});
+  if(d.start>=T)E.push({d:d,k:"open",t:d.start,x:d.brand+(one?" reward is valid on this day only":" reward opens")});
+  if(!one&&d.end>=T)E.push({d:d,k:"end",t:d.end,x:d.brand+" reward expires (last day)"})});
+ if(!E.length)return "";
+ E.sort(function(a,b){return a.t-b.t||ord[a.k]-ord[b.k]});
+ var M={};E.forEach(function(e){e.key=e.d.id+"-"+e.k+"-"+R.yr;e.on=!!(st.rem||{})[e.key];(M[ymd(e.t)]=M[ymd(e.t)]||[]).push(e)});
+ var last=E[E.length-1].t>R.next?E[E.length-1].t:R.next,ms=new Date(E[0].t.getFullYear(),E[0].t.getMonth(),1),mh="",n=0;
+ while(ms<=last&&n<3){
+  var y=ms.getFullYear(),m=ms.getMonth(),dim=new Date(y,m+1,0).getDate(),lead=(ms.getDay()+6)%7,g="";
+  ["M","T","W","T","F","S","S"].forEach(function(w){g+="<b>"+w+"</b>"});
+  for(var i=0;i<lead;i++)g+="<span></span>";
+  for(i=1;i<=dim;i++){var dd=new Date(y,m,i),k=ymd(dd),ev=M[k]||[],op=L.some(function(d){return d.start<=dd&&dd<=d.end}),kinds=[];
+   ev.forEach(function(e){if(kinds.indexOf(e.k)<0)kinds.push(e.k)});
+   var tt=ev.map(function(e){return e.x}).join("; ");
+   g+='<div class="c'+(op?" o":"")+(+dd===+R.next?" bd":"")+(+dd===+T?" td":"")+'"'+(tt?' title="'+esc(tt)+'" aria-label="'+i+" "+esc(tt)+'"':'')+'>'+i+'<span class="dts">'+kinds.map(function(x){return '<i class="dt '+KC[x]+'"></i>'}).join("")+'</span></div>'}
+  mh+='<div class="mo"><h3>'+ms.toLocaleDateString("en-GB",{month:"long",year:"numeric"})+'</h3><div class="g">'+g+'</div></div>';
+  ms=new Date(y,m+1,1);n++}
+ function row(e){return '<li class="ag"><time>'+fmt(e.t)+'</time><span class="kd '+KC[e.k]+'">'+KL[e.k]+'</span><span class="tx">'+esc(e.x)+'</span><span class="ra"><button class="btn small ghost" data-act="rem" data-k="'+e.key+'" aria-pressed="'+e.on+'">'+(e.on?"Reminder on ✓":"Remind me")+'</button><a class="link" target="_blank" rel="noopener" href="'+gcal(e)+'">Add to calendar</a></span></li>'}
+ var due=E.filter(function(e){return e.on&&daysBetween(T,e.t)<=3}),joins=E.filter(function(e){return e.k==="join"&&!e.on}).map(function(e){return e.key});
+ var h='<section class="cal"><h2>Your rewards calendar</h2><div class="legend"><span class="k1">Last day to sign up</span><span class="k2">Reward opens</span><span class="k3">Reward expires</span><span class="lo">A reward is open</span><span class="lb">Your birthday</span></div>';
+ if(due.length)h+='<div class="note due"><strong>Reminders due in the next 3 days</strong><ul class="agl">'+due.map(row).join("")+'</ul></div>';
+ h+='<div class="months">'+mh+'</div><div class="panel"><h3>Dates and reminders</h3><p class="why" style="margin:6px 0 4px">Reminders show at the top of this calendar, within 3 days of a date, whenever you open Wishora. “Add to calendar” puts an all-day event in Google Calendar, where you can set an alert.</p>'
+  +(joins.length?'<button class="btn small" style="margin:8px 0" data-act="remall" data-k="'+joins.join(",")+'">Remind me about every sign-up deadline</button>':'')
+  +'<ul class="agl">'+E.slice(0,8).map(row).join("")+'</ul>'+(E.length>8?'<details style="margin-top:8px"><summary>Show '+(E.length-8)+' more dates</summary><ul class="agl">'+E.slice(8).map(row).join("")+'</ul></details>':'')+'</div></section>';
+ return h}
+var tab="plan";function hid(t){return tab===t?"":" hidden"}
+var plan=null,chat=[],busy=false,AI=null,tried=false;
+var SYS="You are Wishora’s birthday assistant. Recommend birthday deals using ONLY the deals in the CONTEXT. Never invent brands, rewards, prices or dates. The deals are unverified samples, so when you give a concrete recommendation remind the user to check terms with the brand. Weigh the user’s interests, favourite brands, city, today’s date, join-by dates and budget. The data has no purchase costs: if the budget is tight, prefer rewards that only need a sign-up and say a purchase may be needed. Be warm and brief: under 120 words, plain text, at most 4 short lines starting with •, no markdown symbols such as ** or #. Give the next concrete step with a date where possible. If the question is not about birthday deals, say so politely in one sentence. If nothing fits, say so. End with one final line exactly like PICKS: id1,id2 using ids from the deals (max 3), or PICKS: none.";
+function budLabels(){var s=(plan&&SYM[plan.p.country])||"€";return ["Free only","Up to "+s+"10","Up to "+s+"25","No limit"]}
+function drawAi(){var b=st.bud==null?1:st.bud;$("budChips").innerHTML=budLabels().map(function(x,i){return '<button type="button" class="chip" data-b="'+i+'" aria-pressed="'+(b===i)+'">'+esc(x)+'</button>'}).join("");
+ $("sugg").innerHTML=["What should I claim first?","Best deals for my interests?","What can I get this week?","Get the most value on my budget"].map(function(x){return '<button type="button" class="chip" data-q="'+esc(x)+'">'+esc(x)+'</button>'}).join("")}
+function ctx(){var P=plan.p,R=plan.R,s=SYM[P.country]||"€",cn=(COUNTRIES.filter(function(c){return c[0]===P.country})[0]||["","Unspecified"])[1];
+ return JSON.stringify({today:fmt(R.today),userBirthday:fmt(R.next),daysToBirthday:R.days,country:cn,city:P.city||null,age:P.age||null,interests:P.ints,favouriteBrands:P.brands,budget:budLabels()[st.bud==null?1:st.bud],deals:plan.L.map(function(d){return {id:d.id,brand:d.brand,reward:d.offer,categories:d.tags,needs:d.needs,joinByDate:d.joinBy?(d.left>=0?fmt(d.joinBy):"already passed"):"no sign-up lead time",rewardWindow:fmt(d.start)+" to "+fmt(d.end),estimatedValue:s+(VAL[d.id]||0),whyMatched:d.why,claimed:!!(st.done||{})[d.id+"-"+R.yr]}})})}
+function addMsg(r,t){var e=document.createElement("div");e.className="msg "+r;e.textContent=t;$("log").appendChild(e);e.scrollIntoView({block:"nearest"});return e}
+function picks(el,ids){var w=document.createElement("div");w.className="picks";ids.forEach(function(id){var d=plan.L.filter(function(x){return x.id===id})[0];if(!d)return;var b=document.createElement("button");b.type="button";b.className="chip";b.dataset.id=id;b.setAttribute("aria-pressed",!!(st.saved||{})[id]);b.textContent=((st.saved||{})[id]?"Saved ★ ":"Save ☆ ")+d.brand;w.appendChild(b)});if(w.children.length)el.appendChild(w)}
+function parse(t){var m=t.match(/PICKS:\s*([^\n]*)\s*$/i),ids=[];if(m){ids=m[1].split(/[,\s]+/).filter(function(x){return plan.L.some(function(d){return d.id===x})}).slice(0,3);t=t.slice(0,m.index)}return {text:t.trim(),ids:ids}}
+function fallback(){var top=plan.L.filter(function(d){return !(st.done||{})[d.id+"-"+plan.R.yr]}).slice(0,3);return {text:top.length?"The AI assistant isn’t available in this view, so here are your best matches for your interests and brands:\n"+top.map(function(d){return "• "+d.brand+": "+d.offer}).join("\n"):"I don’t have any deals to suggest yet.",ids:top.map(function(d){return d.id})}}
+async function ask(q){
+ q=q.trim();if(!q||busy||!plan)return;busy=true;$("ask").disabled=true;
+ chat.push({role:"user",content:q});addMsg("u",q);$("q").value="";
+ var el=addMsg("a","Thinking…"),res;
+ try{
+  if(!tried){tried=true;try{AI=window.claude?await claude.use("sample"):null}catch(e){AI=null}}
+  if(!AI)res=fallback();
+  else{var h=chat.slice(-8);while(h.length&&h[0].role==="assistant")h.shift();
+   var msgs=[{role:"user",content:SYS+"\n\nCONTEXT:\n"+ctx()},{role:"assistant",content:"Understood. Ask me anything about your birthday deals."}].concat(h);
+   var r=await AI(msgs,{cache:false,onText:function(o){el.textContent=o.text.replace(/PICKS:[\s\S]*$/i,"").trim()||"Thinking…"}});
+   res=parse(r.text)}
+ }catch(err){res=(err&&err.code==="rate_limited")?{text:"I’m getting a lot of questions right now. Please try again in a moment.",ids:[]}:fallback()}
+ el.textContent=res.text;picks(el,res.ids);chat.push({role:"assistant",content:res.text});busy=false;$("ask").disabled=false}
+$("ask").onclick=function(){ask($("q").value)};
+$("q").onkeydown=function(e){if(e.key==="Enter"){e.preventDefault();ask($("q").value)}};
+$("sugg").onclick=function(e){var b=e.target.closest("button[data-q]");if(b)ask(b.dataset.q)};
+$("budChips").onclick=function(e){var b=e.target.closest("button[data-b]");if(b){st.bud=+b.dataset.b;save();drawAi()}};
+$("log").onclick=function(e){var b=e.target.closest("button[data-id]");if(!b)return;st.saved=st.saved||{};var id=b.dataset.id;if(st.saved[id])delete st.saved[id];else st.saved[id]=1;save();var d=plan.L.filter(function(x){return x.id===id})[0];b.setAttribute("aria-pressed",!!st.saved[id]);b.textContent=(st.saved[id]?"Saved ★ ":"Save ☆ ")+d.brand;drawTabs()};
+var lastL=null;function tabs(L){var has=!!L,n=has?L.filter(function(d){return (st.saved||{})[d.id]}).length:0,T=[["plan","Plan",""],["ov","Overview",""],["deals","Deals",has?L.length:""],["cal","Calendar",""],["sv","Saved",has?n:""],["ai","Assistant",""]];return T.map(function(t){var off=!has&&t[0]!=="plan";return '<button class="tab" role="tab" data-t="'+t[0]+'"'+(off?' aria-disabled="true" style="opacity:.55"':'')+' aria-selected="'+(tab===t[0])+'">'+t[1]+(t[2]!==""?'<span class="ct">'+t[2]+'</span>':'')+'</button>'}).join("")}
+function drawTabs(L){lastL=L||lastL;$("tabbar").innerHTML=tabs(lastL);$("hero").hidden=tab!=="plan";$("ai").hidden=tab!=="ai";if(tab==="ai"&&plan)drawAi()}
+$("tabbar").onclick=function(e){var b=e.target.closest("button[data-t]");if(!b)return;tab=b.dataset.t;if(!cur&&tab!=="plan"){tab="plan";drawTabs();$("gate").hidden=false;$("bd").focus()}else if(cur)render(cur);else drawTabs();window.scrollTo(0,0)};
+function fmtISO(x){var d=new Date(x);return isNaN(d)?"":fmt(d)}
+fetch("data/deals.json",{cache:"no-cache"}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){
+ var items=(j.deals||[]).filter(function(x){return x.status!=="removed"&&x.window});
+ if(!items.length)return;
+ D.length=0;
+ items.forEach(function(x){D.push([x.id,x.brand,x.offer,x.categories||[],x.countries||[],x.window.type,x.window.from||0,x.window.to||0,x.joinDaysBefore||0,x.needs||[],x.steps||[],x.kids?"kids":"",{url:x.sourceUrl,lastVerified:x.lastVerified,timingVerified:x.timingVerified,stale:x.status==="stale"}]);if(x.estValue!=null)VAL[x.id]=x.estValue});
+ BRANDS=D.map(function(d){return d[1]});
+ $("brandList").innerHTML=BRANDS.map(function(b){return '<option value="'+esc(b)+'">'}).join("");
+ if(cur)render(cur);
+}).catch(function(){});
+var cur=null;
+$("form").onsubmit=function(e){
+  e.preventDefault();addBrand();
+  if(!$("bd").value){$("bd").focus();return}
+  var p={bd:$("bd").value,age:$("age").value,country:$("country").value,city:$("city").value.trim(),brands:brands.slice(),ints:ints.slice()};
+  st.bd=p.bd;st.age=p.age;st.country=p.country;st.city=p.city;st.brands=brands;st.ints=ints;save();
+  cur=p;tab="ov";$("gate").hidden=true;chat=[];$("log").innerHTML="";render(p);$("results").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"})};
+$("results").onclick=function(e){
+  var b=e.target.closest("button[data-act]");if(!b||!cur)return;if(b.dataset.act==="tab"){tab=b.dataset.t;render(cur);$("results").scrollIntoView();return}
+  if(b.dataset.act==="done"){st.done=st.done||{};st.done[b.dataset.k]=!st.done[b.dataset.k];}
+  else if(b.dataset.act==="rem"){st.rem=st.rem||{};if(st.rem[b.dataset.k])delete st.rem[b.dataset.k];else st.rem[b.dataset.k]=1}else if(b.dataset.act==="remall"){st.rem=st.rem||{};b.dataset.k.split(",").forEach(function(k){st.rem[k]=1})}else if(b.dataset.act==="save"){st.saved=st.saved||{};if(st.saved[b.dataset.id])delete st.saved[b.dataset.id];else st.saved[b.dataset.id]=1}else{st.rep=st.rep||{};st.rep[b.dataset.id]=(st.rep[b.dataset.id]||0)+1}
+  save();var y=window.scrollY;render(cur);window.scrollTo(0,y)};
+drawTabs();if(st.bd&&st.country){tab="ov";cur={bd:st.bd,age:st.age,country:st.country,city:st.city||"",brands:brands.slice(),ints:ints.slice()};render(cur)}
+})();
+</script>
+</body>
+</html>

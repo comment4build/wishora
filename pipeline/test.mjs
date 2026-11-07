@@ -1,0 +1,13 @@
+import assert from "node:assert/strict";
+import { extractFacts } from "./extract.mjs";
+import { quoteInText, isOfficial } from "./lib.mjs";
+const page = "Welcome to our rewards club. Members receive a free drink or food item on their birthday. You must join at least 7 days before your birthday to be eligible. Redeem it in the app on your birthday only.";
+const x = extractFacts(page);
+assert.equal(x.found, true); assert.equal(x.offer, "Free drink");
+assert.deepEqual(x.timing, { type: "day", from: 0, to: 0 }); assert.equal(x.join, 7); assert.equal(x.app, true);
+for (const q of [x.evidence, x.timingQuote, x.joinQuote]) assert.ok(quoteInText(q, page), q);
+assert.equal(extractFacts("We sell coffee and cakes every day.").found, false);
+const tiers = "Green members get a free drink on your birthday. Gold members get a treat during your birthday month.";
+assert.equal(extractFacts(tiers).timing, null, "conflicting timings must not be guessed");
+assert.ok(isOfficial("https://www.brand.com/x", ["brand.com"])); assert.ok(!isOfficial("https://brand.com.evil.io/", ["brand.com"]));
+console.log("all tests passed");

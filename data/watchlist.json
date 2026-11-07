@@ -1,0 +1,15 @@
+[
+  {"id":"starbucks-us","brand":"Starbucks","countries":["US"],"domains":["starbucks.com"],"categories":["Coffee","Food & drink"]},
+  {"id":"starbucks-gb","brand":"Starbucks","countries":["GB"],"domains":["starbucks.co.uk"],"categories":["Coffee","Food & drink"]},
+  {"id":"krispy-kreme-us","brand":"Krispy Kreme","countries":["US"],"domains":["krispykreme.com"],"categories":["Sweet treats","Food & drink"]},
+  {"id":"krispy-kreme-gb","brand":"Krispy Kreme","countries":["GB"],"domains":["krispykreme.co.uk"],"categories":["Sweet treats","Food & drink"]},
+  {"id":"sephora-us","brand":"Sephora","countries":["US"],"domains":["sephora.com"],"categories":["Beauty","Self-care"]},
+  {"id":"sephora-gb","brand":"Sephora","countries":["GB"],"domains":["sephora.co.uk"],"categories":["Beauty","Self-care"]},
+  {"id":"ulta-us","brand":"Ulta Beauty","countries":["US"],"domains":["ulta.com"],"categories":["Beauty","Self-care"]},
+  {"id":"rituals-be","brand":"Rituals","countries":["BE"],"domains":["rituals.com"],"categories":["Self-care","Beauty"]},
+  {"id":"hm-be","brand":"H&M","countries":["BE"],"domains":["hm.com"],"categories":["Fashion"]},
+  {"id":"dunkin-us","brand":"Dunkin'","countries":["US"],"domains":["dunkindonuts.com"],"categories":["Coffee","Sweet treats"]},
+  {"id":"nandos-gb","brand":"Nando's","countries":["GB"],"domains":["nandos.co.uk"],"categories":["Food & drink"]},
+  {"id":"costa-gb","brand":"Costa Coffee","countries":["GB"],"domains":["costa.co.uk"],"categories":["Coffee"]},
+  {"id":"build-a-bear-us","brand":"Build-A-Bear","countries":["US"],"domains":["buildabear.com"],"categories":["Kids & family"],"kids":true}
+]
