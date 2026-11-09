@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T12:19:16.518Z",
+  "generatedAt": "2026-11-09T14:24:42.022Z",
   "report": [
     {
       "id": "starbucks-us",
@@ -225,9 +225,8 @@
     },
     {
       "id": "sonic-us",
-      "status": "verified",
-      "confidence": "medium",
-      "url": "https://www.sonicdrivein.com/rewards/"
+      "status": "active",
+      "reason": "HTTP 404"
     },
     {
       "id": "arbys-us",

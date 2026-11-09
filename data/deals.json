@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T12:19:16.516Z",
+  "generatedAt": "2026-11-09T14:24:42.021Z",
   "deals": [
     {
       "id": "dunkin-us",
@@ -30,7 +30,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -70,7 +70,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -106,7 +106,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -143,7 +143,7 @@
       "timingVerified": true,
       "confidence": "high",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -181,7 +181,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -216,7 +216,7 @@
       "timingVerified": true,
       "confidence": "high",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -254,7 +254,7 @@
       "timingVerified": true,
       "confidence": "high",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -293,7 +293,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -316,7 +316,9 @@
         "to": 0
       },
       "joinDaysBefore": 0,
-      "needs": [],
+      "needs": [
+        "Purchase may be needed"
+      ],
       "steps": [
         "Check the brand’s own terms for the details"
       ],
@@ -327,7 +329,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -363,7 +365,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -397,7 +399,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -435,7 +437,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -471,8 +473,9 @@
       "firstSeen": "2026-11-07",
       "lastVerified": "2026-11-07",
       "status": "active",
-      "failures": 0,
-      "changedAt": null
+      "failures": 1,
+      "changedAt": null,
+      "lastError": "HTTP 404"
     },
     {
       "id": "qdoba-us",
@@ -506,7 +509,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -540,7 +543,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -573,7 +576,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -611,7 +614,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -644,7 +647,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -679,7 +682,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -715,7 +718,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -746,15 +749,15 @@
       ],
       "estValue": null,
       "sourceUrl": "https://insomniacookies.com/products/6-happy-birthday-gift-box",
-      "evidence": "Do not sell or share my personal information Allow all Customize Allow selection Deny 6\" Happy Birthday Gift Box Accessibility Statement Rewards members: free delivery",
-      "evidenceHash": "d2c199a79603",
+      "evidence": "Do not sell or share my personal information Allow all Customize Allow selection Deny 6\" Happy Birthday Gift Box Accessibility Statement Find a Bakery Gifting",
+      "evidenceHash": "4e510502e9d8",
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
-      "changedAt": null
+      "changedAt": "2026-11-09"
     },
     {
       "id": "nothing-bundt-cakes-us",
@@ -787,7 +790,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -820,7 +823,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -853,7 +856,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -891,7 +894,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -930,7 +933,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -964,7 +967,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -1001,7 +1004,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -1036,7 +1039,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -1074,7 +1077,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -1113,7 +1116,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -1121,7 +1124,7 @@
     {
       "id": "hot-topic-us",
       "brand": "Hot Topic",
-      "offer": "40% Off",
+      "offer": "50% Off",
       "categories": [
         "Fashion"
       ],
@@ -1143,15 +1146,15 @@
       ],
       "estValue": null,
       "sourceUrl": "https://www.hottopic.com/shop/birthday-cupcake/",
-      "evidence": "Birthday Cupcake | Hot Topic Skip to main content Spend Your Hot Cash Now* Shop Now Up To 40% Off Select Styles* Shop Now Up",
-      "evidenceHash": "cbf276c9b0eb",
+      "evidence": "Birthday Cupcake | Hot Topic Skip to main content Earn Hot Cash Every $40 Spent* Shop Now Sleep Pants Starting At $20* Shop Now Up",
+      "evidenceHash": "c4dfa44b0578",
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
-      "changedAt": null
+      "changedAt": "2026-11-09"
     },
     {
       "id": "chuck-e-cheese-us",
@@ -1185,7 +1188,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-07",
+      "lastVerified": "2026-11-09",
       "status": "active",
       "failures": 0,
       "changedAt": null
