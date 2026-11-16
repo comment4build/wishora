@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T14:24:42.022Z",
+  "generatedAt": "2026-11-16T14:09:18.323Z",
   "report": [
     {
       "id": "starbucks-us",
@@ -74,9 +74,8 @@
     },
     {
       "id": "buffalo-wild-wings-us",
-      "status": "verified",
-      "confidence": "high",
-      "url": "https://www.buffalowildwings.com/rewards/"
+      "status": "active",
+      "reason": "HTTP 404"
     },
     {
       "id": "jersey-mikes-us",
@@ -174,9 +173,8 @@
     },
     {
       "id": "krispy-kreme-gb",
-      "status": "verified",
-      "confidence": "medium",
-      "url": "https://www.krispykreme.co.uk/shop/doughnuts-by-range/birthday.html"
+      "status": "active",
+      "reason": "HTTP 403"
     },
     {
       "id": "sephora-gb",
@@ -225,8 +223,9 @@
     },
     {
       "id": "sonic-us",
-      "status": "active",
-      "reason": "HTTP 404"
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.sonicdrivein.com/rewards/"
     },
     {
       "id": "arbys-us",
@@ -246,7 +245,7 @@
     {
       "id": "wingstop-us",
       "status": "skipped",
-      "reason": "page has no birthday reward"
+      "reason": "too little text: page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.wingstop.com/email-club\", waiting until \"networkidle\"\n"
     },
     {
       "id": "qdoba-us",
@@ -403,14 +402,14 @@
     },
     {
       "id": "hot-topic-us",
-      "status": "verified",
-      "confidence": "medium",
-      "url": "https://www.hottopic.com/shop/birthday-cupcake/"
+      "status": "active",
+      "reason": "page has no birthday reward"
     },
     {
       "id": "gamestop-us",
-      "status": "skipped",
-      "reason": "HTTP 403"
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.gamestop.com/video-games/wii/products/dora-the-explorer-doras-big-birthday-adventure---nintendo-wii/917960.html"
     },
     {
       "id": "chuck-e-cheese-us",
