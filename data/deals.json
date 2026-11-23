@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T14:09:18.322Z",
+  "generatedAt": "2026-11-23T16:27:53.448Z",
   "deals": [
     {
       "id": "dunkin-us",
@@ -30,7 +30,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -70,7 +70,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -106,7 +106,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -143,7 +143,7 @@
       "timingVerified": true,
       "confidence": "high",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -181,7 +181,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -216,7 +216,7 @@
       "timingVerified": true,
       "confidence": "high",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -255,8 +255,8 @@
       "confidence": "high",
       "firstSeen": "2026-11-07",
       "lastVerified": "2026-11-09",
-      "status": "active",
-      "failures": 1,
+      "status": "stale",
+      "failures": 2,
       "changedAt": null,
       "lastError": "HTTP 404"
     },
@@ -294,7 +294,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -330,7 +330,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -353,8 +353,7 @@
       },
       "joinDaysBefore": 0,
       "needs": [
-        "Membership",
-        "Purchase may be needed"
+        "Membership"
       ],
       "steps": [
         "Join the brand’s rewards programme",
@@ -367,7 +366,41 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
+      "status": "active",
+      "failures": 0,
+      "changedAt": null
+    },
+    {
+      "id": "petsmart-us",
+      "brand": "PetSmart",
+      "offer": "Birthday reward for members",
+      "categories": [
+        "Pets"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "month",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [],
+      "steps": [
+        "Add your birthday to your account",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.petsmart.com/dog/treats/biscuits-cookies-and-bakery-treats/three-dog-bakery-birthday-confetti-lickn-crunch-sandwich-cookies-13-oz-91653.html",
+      "evidence": "Learn more You may also like Old Mother Hubbard & Milkbar Collaboration All Life Stages Dog Treat - 10 oz (212) $5.99 Add to cart",
+      "evidenceHash": "e606d5f18fbf",
+      "timingVerified": false,
+      "confidence": "medium",
+      "firstSeen": "2026-11-23",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -401,7 +434,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -439,11 +472,10 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-09",
+      "lastVerified": "2026-11-23",
       "status": "active",
-      "failures": 1,
-      "changedAt": null,
-      "lastError": "HTTP 403"
+      "failures": 0,
+      "changedAt": null
     },
     {
       "id": "sonic-us",
@@ -475,6 +507,43 @@
       "confidence": "medium",
       "firstSeen": "2026-11-07",
       "lastVerified": "2026-11-16",
+      "status": "active",
+      "failures": 1,
+      "changedAt": null,
+      "lastError": "HTTP 404"
+    },
+    {
+      "id": "wingstop-us",
+      "brand": "Wingstop",
+      "offer": "Bonus Points",
+      "categories": [
+        "Food & drink"
+      ],
+      "countries": [
+        "US"
+      ],
+      "kids": false,
+      "window": {
+        "type": "day",
+        "from": 0,
+        "to": 0
+      },
+      "joinDaysBefore": 0,
+      "needs": [
+        "Membership"
+      ],
+      "steps": [
+        "Join the brand’s rewards programme",
+        "Check the brand’s own terms for the details"
+      ],
+      "estValue": null,
+      "sourceUrl": "https://www.wingstop.com/club-wingstop-terms/notice-of-financial-incentives",
+      "evidence": "Members may also receive bonus Points and /or Rewards for participating in events, competitions, challenges, and promotional activities, or simply for being a part of",
+      "evidenceHash": "898f11b3eb4a",
+      "timingVerified": true,
+      "confidence": "high",
+      "firstSeen": "2026-11-23",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -511,7 +580,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -545,7 +614,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -578,7 +647,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -616,7 +685,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -649,7 +718,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -684,7 +753,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -720,7 +789,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -751,15 +820,15 @@
       ],
       "estValue": null,
       "sourceUrl": "https://insomniacookies.com/products/6-happy-birthday-gift-box",
-      "evidence": "Do not sell or share my personal information Allow all Customize Allow selection Deny 6\" Happy Birthday Gift Box Accessibility Statement Free delivery for Rewards",
-      "evidenceHash": "7ae6fcb345c5",
+      "evidence": "Do not sell or share my personal information Allow all Customize Allow selection Deny 6\" Happy Birthday Gift Box Accessibility Statement Use code MNMUNCHIES for",
+      "evidenceHash": "c2d4579f8b65",
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
-      "changedAt": "2026-11-16"
+      "changedAt": "2026-11-23"
     },
     {
       "id": "nothing-bundt-cakes-us",
@@ -792,7 +861,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -825,7 +894,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -858,7 +927,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -896,7 +965,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -935,7 +1004,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -969,7 +1038,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -1006,7 +1075,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -1041,7 +1110,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -1079,7 +1148,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -1118,7 +1187,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null
@@ -1154,15 +1223,15 @@
       "confidence": "medium",
       "firstSeen": "2026-11-07",
       "lastVerified": "2026-11-09",
-      "status": "active",
-      "failures": 1,
+      "status": "stale",
+      "failures": 2,
       "changedAt": "2026-11-09",
       "lastError": "page has no birthday reward"
     },
     {
       "id": "gamestop-us",
       "brand": "GameStop",
-      "offer": "Birthday reward for members",
+      "offer": "Birthday treat",
       "categories": [
         "Gaming"
       ],
@@ -1186,15 +1255,15 @@
       ],
       "estValue": null,
       "sourceUrl": "https://www.gamestop.com/video-games/wii/products/dora-the-explorer-doras-big-birthday-adventure---nintendo-wii/917960.html",
-      "evidence": "Guaranteed to work May not include original box or manual Pictured item may not represent condition received 7 day money back guarantee Most purchases can",
-      "evidenceHash": "c61bf953859a",
+      "evidence": "Unlock Exclusive Rewards and Surprises in the Whirlwind World: Discover hidden stars, magical party hats, and special birthday treats as you progress through Dora's Big",
+      "evidenceHash": "e454ee3c83d4",
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-16",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
-      "changedAt": null
+      "changedAt": "2026-11-23"
     },
     {
       "id": "chuck-e-cheese-us",
@@ -1228,7 +1297,7 @@
       "timingVerified": false,
       "confidence": "medium",
       "firstSeen": "2026-11-07",
-      "lastVerified": "2026-11-16",
+      "lastVerified": "2026-11-23",
       "status": "active",
       "failures": 0,
       "changedAt": null

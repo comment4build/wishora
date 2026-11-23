@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T14:09:18.323Z",
+  "generatedAt": "2026-11-23T16:27:53.449Z",
   "report": [
     {
       "id": "starbucks-us",
@@ -74,7 +74,7 @@
     },
     {
       "id": "buffalo-wild-wings-us",
-      "status": "active",
+      "status": "stale",
       "reason": "HTTP 404"
     },
     {
@@ -147,8 +147,9 @@
     },
     {
       "id": "petsmart-us",
-      "status": "skipped",
-      "reason": "fetch failed"
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.petsmart.com/dog/treats/biscuits-cookies-and-bakery-treats/three-dog-bakery-birthday-confetti-lickn-crunch-sandwich-cookies-13-oz-91653.html"
     },
     {
       "id": "petco-us",
@@ -173,8 +174,9 @@
     },
     {
       "id": "krispy-kreme-gb",
-      "status": "active",
-      "reason": "HTTP 403"
+      "status": "verified",
+      "confidence": "medium",
+      "url": "https://www.krispykreme.co.uk/shop/doughnuts-by-range/birthday.html"
     },
     {
       "id": "sephora-gb",
@@ -223,9 +225,8 @@
     },
     {
       "id": "sonic-us",
-      "status": "verified",
-      "confidence": "medium",
-      "url": "https://www.sonicdrivein.com/rewards/"
+      "status": "active",
+      "reason": "HTTP 404"
     },
     {
       "id": "arbys-us",
@@ -244,8 +245,9 @@
     },
     {
       "id": "wingstop-us",
-      "status": "skipped",
-      "reason": "too little text: page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.wingstop.com/email-club\", waiting until \"networkidle\"\n"
+      "status": "verified",
+      "confidence": "high",
+      "url": "https://www.wingstop.com/club-wingstop-terms/notice-of-financial-incentives"
     },
     {
       "id": "qdoba-us",
@@ -402,7 +404,7 @@
     },
     {
       "id": "hot-topic-us",
-      "status": "active",
+      "status": "stale",
       "reason": "page has no birthday reward"
     },
     {
